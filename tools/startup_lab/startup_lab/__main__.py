@@ -24,6 +24,13 @@ def main():
     snapshot=sub.add_parser('verify-snapshot',help='Check a quoted excerpt in local HTML, without making network requests')
     snapshot.add_argument('html_file')
     snapshot.add_argument('excerpt')
+    discovery=sub.add_parser('discover',help='Browse evidence-linked user needs')
+    discovery.add_argument('query',nargs='?',default='')
+    discovery.add_argument('--root',default='.')
+    discovery.add_argument('--limit',type=int,default=20)
+    exploration=sub.add_parser('explore',help='Inspect need, products and evidence')
+    exploration.add_argument('need_id')
+    exploration.add_argument('--root',default='.')
     args=parser.parse_args()
     if args.command=='evaluate':
         report=evaluate_file(args.file)
@@ -45,6 +52,12 @@ def main():
         result['source_file']=args.html_file
         result['verification_scope']='text presence in supplied local snapshot only'
         print(json.dumps(result,ensure_ascii=False,indent=2))
+    elif args.command=='discover':
+        from .opportunity import discover
+        print(json.dumps(discover(args.root,args.query,args.limit),ensure_ascii=False,indent=2))
+    elif args.command=='explore':
+        from .opportunity import explore
+        print(json.dumps(explore(args.root,args.need_id),ensure_ascii=False,indent=2))
     elif args.command=='candidates':
         from .report_candidates import report_candidates
         print(json.dumps(report_candidates(args.report),ensure_ascii=False,indent=2))
