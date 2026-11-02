@@ -1,0 +1,24 @@
+{
+  "id": "005_no_competitor",
+  "hypothesis": "Synthetic startup evaluation fixture",
+  "evidence": [
+    {
+      "id": "e1",
+      "url": "https://example.org/synthetic-need-0",
+      "observed_at": "2026-11-03",
+      "type": "user_report",
+      "dimension": "user_need",
+      "stance": "supports",
+      "claim": "Synthetic need example; not verified"
+    },
+    {
+      "id": "e2",
+      "url": "https://example.org/synthetic-counter-1",
+      "observed_at": "2026-11-03",
+      "type": "user_report",
+      "dimension": "pricing",
+      "stance": "contradicts",
+      "claim": "Synthetic counter example; not verified"
+    }
+  ]
+}
