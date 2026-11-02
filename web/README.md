@@ -13,3 +13,9 @@ Use a local HTTP server: `python -m http.server 8000 -d web`, then open http://l
 The data is explicitly provisional and includes original citations and limitations. Editing data files requires regenerating the feed. The future production workflow must distinguish promotional claims from firsthand user accounts, protect against malicious fields, and preserve links to original source context.
 
 The GitHub Pages workflow publishes the `web/` directory upon pushes to main or manual workflow runs, if Pages deployment is enabled for the repository in GitHub Settings → Pages (GitHub Actions source). Deployment success must be checked in Actions before sharing a live URL.
+
+## Localization
+
+The homepage and exploration detail page support **English (EN), 中文 (zh), français (FR)** via the header selector. The selected language is remembered in localStorage; when no preference is stored, browser language selects the initial locale (fallback EN). Translations are in `web/i18n.js`. The current three provisional records have manually authored presentation summaries in all three languages. Research evidence files, source URLs, original source locators and factual provenance remain unchanged. Future incoming records without a translated summary fall back to the original record text; do not silently claim a machine translation is a sourced statement.
+
+To check: switch locale on homepage, open a card, verify selection persists and questions/limitations switch language; reload; test in mobile width. GitHub Pages deployment and actual end-to-end browser tests still require confirmation.
