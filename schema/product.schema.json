@@ -1,0 +1,91 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Product",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "name",
+    "url",
+    "first_observed",
+    "last_verified",
+    "status",
+    "evidence_ids"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+$"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "url": {
+      "type": "string",
+      "format": "uri"
+    },
+    "region": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "category": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "ai_role": {
+      "enum": [
+        "native",
+        "enabled",
+        "non-ai",
+        "unknown"
+      ]
+    },
+    "funding_status": {
+      "enum": [
+        "funded",
+        "bootstrapped",
+        "unknown"
+      ]
+    },
+    "first_observed": {
+      "type": "string",
+      "format": "date"
+    },
+    "last_verified": {
+      "type": "string",
+      "format": "date"
+    },
+    "status": {
+      "enum": [
+        "active",
+        "beta",
+        "closed",
+        "unknown"
+      ]
+    },
+    "user_segment": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "job_to_be_done": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "evidence_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    }
+  }
+}
