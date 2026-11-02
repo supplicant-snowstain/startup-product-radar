@@ -1,0 +1,110 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Reviewed Evidence",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "statement",
+    "source_url",
+    "source_locator",
+    "observed_at",
+    "evidence_type",
+    "direction",
+    "limitations",
+    "dimension",
+    "reviewed_by",
+    "reviewed_at"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^ev-[a-f0-9]{16}$"
+    },
+    "statement": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 800
+    },
+    "source_url": {
+      "type": "string",
+      "format": "uri"
+    },
+    "source_locator": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_published_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "event_date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "observed_at": {
+      "type": "string",
+      "format": "date"
+    },
+    "product_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "evidence_type": {
+      "enum": [
+        "primary",
+        "user-report",
+        "independent",
+        "founder-claim",
+        "investor-claim",
+        "analyst-inference"
+      ]
+    },
+    "direction": {
+      "enum": [
+        "support",
+        "contradict",
+        "context",
+        "unknown"
+      ]
+    },
+    "dimension": {
+      "enum": [
+        "user_need",
+        "competitor",
+        "differentiation",
+        "distribution",
+        "pricing",
+        "feasibility"
+      ]
+    },
+    "confidence": {
+      "enum": [
+        "low",
+        "medium",
+        "high",
+        "unassessed"
+      ]
+    },
+    "limitations": {
+      "type": "string",
+      "minLength": 1
+    },
+    "reviewed_by": {
+      "type": "string",
+      "minLength": 1
+    },
+    "reviewed_at": {
+      "type": "string",
+      "format": "date"
+    }
+  }
+}
