@@ -23,3 +23,9 @@ To check: switch locale on homepage, open a card, verify selection persists and 
 ### Translator workflow
 
 Edit the matching JSON locale file while keeping the same UI keys in every language. Add presentation-only translations for each existing provisional signal in zh/fr, preserving source URLs, provenance, and original statements in `signals.json`. Validate with `PYTHONPATH=tools/startup_lab python -m unittest discover -s tools/startup_lab/tests -v`; CI tests localization key parity and signal coverage. New signals without a translation display original content until translated, not fabricated translations.
+
+## Opportunity Map v0.2
+
+The exploration page displays distinct problem nodes and original-source nodes. Explicit editorial relationships are loaded from `web/opportunity-map.json`; the site **does not** infer that a shared category or shared source establishes the same user need. Edges with `verification: editorial_hypothesis` are labeled provisional. The map is responsive and changes interface language with EN/中文/FR. No claim is made that any link establishes market demand.
+
+**For contributors:** add an edge only when you can state its intended semantic type and specific rationale. Do not add evidence IDs for a relationship until the corresponding evidence genuinely documents that relation. The map is a navigation aid, not an opportunity-scoring algorithm.
