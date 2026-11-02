@@ -21,6 +21,9 @@ def main():
         p.add_argument('--limit',type=int,default=10)
     candidate_parser=sub.add_parser('candidates')
     candidate_parser.add_argument('report')
+    snapshot=sub.add_parser('verify-snapshot',help='Check a quoted excerpt in local HTML, without making network requests')
+    snapshot.add_argument('html_file')
+    snapshot.add_argument('excerpt')
     args=parser.parse_args()
     if args.command=='evaluate':
         report=evaluate_file(args.file)
@@ -35,6 +38,13 @@ def main():
         from .retrieval import retrieve,evidence_sides
         fn=retrieve if args.command=='search' else evidence_sides
         print(json.dumps(fn(args.root,args.query,args.limit),ensure_ascii=False,indent=2))
+    elif args.command=='verify-snapshot':
+        from .source_verify import match_snapshot
+        content=Path(args.html_file).read_text(encoding='utf-8')
+        result=match_snapshot(content,args.excerpt)
+        result['source_file']=args.html_file
+        result['verification_scope']='text presence in supplied local snapshot only'
+        print(json.dumps(result,ensure_ascii=False,indent=2))
     elif args.command=='candidates':
         from .report_candidates import report_candidates
         print(json.dumps(report_candidates(args.report),ensure_ascii=False,indent=2))
