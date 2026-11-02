@@ -3,3 +3,5 @@
 [hidden]{display:none!important}
 
 .language-control{display:inline-flex;align-items:center}.language-control select{appearance:none;border:1px solid var(--line);background:transparent;color:var(--ink);font:700 11px 'DM Sans',sans-serif;border-radius:6px;padding:9px 22px 9px 10px;cursor:pointer}.language-control select:focus-visible{outline:2px solid #438b57;outline-offset:3px}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}@media(max-width:580px){header nav{gap:8px}.language-control select{padding:8px 5px}header .logo{font-size:18px}}
+
+.opportunity-map{padding:32px 0 55px;border-top:1px solid var(--line)}.opportunity-map h3{font-size:29px;letter-spacing:-1px}.opportunity-map p{color:var(--muted);line-height:1.6}.map-link{display:flex;flex-direction:column;gap:9px;background:#fafaf5;border:1px solid var(--line);padding:22px;max-width:580px;margin:14px 0;transition:transform .2s}.map-link:hover{transform:translateY(-3px)}.map-link small{color:var(--muted)}
