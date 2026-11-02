@@ -6,13 +6,13 @@ An open-source opportunity discovery workbench for independent builders. Explore
 
 ## ✦ Experience the prototype
 
-**[Explore the landing page source →](web/index.html)** · [Product roadmap](docs/CURRENT_FOCUS.md) · [First usable release criteria](docs/FIRST_USABLE_RELEASE.md)
+**[Explore the web prototype source →](web/index.html)** · [Product roadmap](docs/CURRENT_FOCUS.md) · [First usable release criteria](docs/FIRST_USABLE_RELEASE.md)
 
 ![Status: alpha](https://img.shields.io/badge/status-alpha-c4e86e) ![License: pending](https://img.shields.io/badge/license-not%20yet%20specified-lightgrey)
 
-**Local preview:** download/clone this repository and open `web/index.html` in a browser. No build, API key, account, or server is required.
+**Local preview:** clone/download the repository, run `python -m http.server 8000 -d web`, then open `http://localhost:8000`. No build, API key or account is required. A local HTTP server is needed because the browser loads `signals.json`.
 
-> **Important:** The first three example cards link to attributable public-source research leads and are clearly labeled **provisional**. They have not undergone independent corroboration or formal review. A beautiful UI is not itself evidence quality. The site is not deployed yet; do not interpret the link above as a live website.
+> **Important:** The first three example cards link to attributable public-source research leads and are clearly labeled **provisional**. They have not undergone independent corroboration or formal review. A beautiful UI is not itself evidence quality. GitHub Pages publication is configured but a live deployment has not yet been verified. See [Actions](https://github.com/supplicant-snowstain/startup-product-radar/actions) for build/deployment status.
 
 ### What you can do today
 - **Discover** provisional problem signals by area and keyword.
