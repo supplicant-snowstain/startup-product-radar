@@ -1,34 +1,88 @@
 # ✳ Startup Product Radar
 
-**Don't start with an idea. Start with a problem.**
+**中文 · [English](#english) · [Français](#français)**
 
-An open-source opportunity discovery workbench for independent builders. Explore publicly observed user friction, trace original sources, and investigate adjacent products and unanswered questions — without treating anecdotes as validated demand.
+**[🌐 Open interactive demo / 打开交互演示 / Ouvrir la démo](https://supplicant-snowstain.github.io/startup-product-radar/)**
 
-## ✦ Experience the prototype
+> **Deployment status / 部署状态 / État du déploiement:** Website URL is the configured GitHub Pages destination; successful publication has **not yet been independently confirmed**. Check [Actions / 部署记录 / Exécutions](https://github.com/supplicant-snowstain/startup-product-radar/actions/workflows/pages.yml). If unavailable, see local instructions below.
 
-**[Explore the web prototype source →](web/index.html)** · [Product roadmap](docs/CURRENT_FOCUS.md) · [First usable release criteria](docs/FIRST_USABLE_RELEASE.md)
+![Alpha](https://img.shields.io/badge/status-alpha-c4e86e) ![License](https://img.shields.io/badge/license-not%20yet%20specified-lightgrey)
 
-![Status: alpha](https://img.shields.io/badge/status-alpha-c4e86e) ![License: pending](https://img.shields.io/badge/license-not%20yet%20specified-lightgrey)
+---
 
-**Local preview:** clone/download the repository, run `python -m http.server 8000 -d web`, then open `http://localhost:8000`. No build, API key or account is required. A local HTTP server is needed because the browser loads `signals.json`.
+<a id="中文"></a>
+## 中文
 
-> **Important:** The first three example cards link to attributable public-source research leads and are clearly labeled **provisional**. They have not undergone independent corroboration or formal review. A beautiful UI is not itself evidence quality. GitHub Pages publication is configured but a live deployment has not yet been verified. See [Actions](https://github.com/supplicant-snowstain/startup-product-radar/actions) for build/deployment status.
+### 不要从点子开始，从一个问题开始。
 
-### What you can do today
-- **Discover** provisional problem signals by area and keyword.
-- **Explore** each signal with a citation, limitations and follow-up questions.
-- **Inspect the data** in [data/provisional](data/provisional/README.md) and the [research index](research/2026-11-03-public-signals.md).
-- **Run the developer toolkit** via [Startup Lab](tools/startup_lab/README.md).
+Startup Product Radar 是面向独立开发者的开源创业机会探索工具。它从公开用户反馈和产品信息中整理**可追溯的问题线索**，帮助你发现值得进一步研究的方向，而不是预测下一个成功创业项目。
 
-### Active stages
-**1. Opportunity Discovery → 2. Opportunity Exploration**. Idea Evaluation and Hypothesis Testing are deferred. See [current focus](docs/CURRENT_FOCUS.md). No new clustering algorithm is necessary for this release.
+**[进入交互网页](https://supplicant-snowstain.github.io/startup-product-radar/)** · [查看网页源码](web/) · [研究方法](METHODOLOGY.md) · [路线图](docs/CURRENT_FOCUS.md)
 
-### Open research library
-[Daily reports](reports/README.md) · [Products](products/README.md) · [Founder journeys](founders/README.md) · [Cross-product insights](insights/README.md) · [Trends](trends/README.md) · [Structured index](index/products.csv) · [Research methodology](METHODOLOGY.md).
+**现在能做什么？** 浏览并搜索公开问题线索；点击卡片进入独立探索页；查看原始来源、证据局限和待研究问题；通过 Opportunity Map 探索明确标注的相关关系。网页支持中文、英文、法文切换。
 
-**Research safeguards:** cite public sources, distinguish firsthand users / founders / investors / analysis, preserve counterevidence and dates; funding and product launches do not prove PMF. This independent public repository excludes private employer information, nonpublic documents, credentials, and proprietary material.
+**本地运行**：克隆仓库后，在仓库根目录运行：
 
-A scheduled daily report is configured around 08:00 Europe/Paris. GitHub archival only counts as complete when corresponding commits are verified.
+```bash
+python -m http.server 8000 -d web
+```
 
-## Contributing
-Issues and pull requests for source corrections, accessibility, design, data schemas and workflow quality are welcome. Do not submit invented customer quotes, sensitive information, or copyrighted page dumps. Any proposed need should link to original public evidence and state what remains unknown.
+随后访问 `http://localhost:8000`。网页通过 HTTP 读取 JSON 数据，直接双击 HTML 文件可能无法加载数据。
+
+**证据说明：** 目前公开数据仅有少量待复核的来源线索。用户评论、创始人表述、关联假设并不等于经过验证的市场需求，也不能据此宣称产品市场匹配。
+
+---
+
+<a id="english"></a>
+## English
+
+### Don't start with an idea. Start with a problem.
+
+Startup Product Radar is an open-source opportunity exploration workbench for independent builders. It collects **traceable public problem signals** and helps you investigate user friction, existing solutions, and unanswered questions — without predicting startup success.
+
+**[Launch interactive demo](https://supplicant-snowstain.github.io/startup-product-radar/)** · [Web source](web/) · [Research methodology](METHODOLOGY.md) · [Roadmap](docs/CURRENT_FOCUS.md)
+
+**What can you do?** Browse and search provisional signals, open evidence-backed exploration pages, inspect source links and limitations, and navigate explicitly labeled hypotheses in the Opportunity Map. The website offers Chinese, English, and French.
+
+**Run locally:** Clone the repository, then from the repository root:
+
+```bash
+python -m http.server 8000 -d web
+```
+
+Open `http://localhost:8000`. A local HTTP server is required to fetch JSON data; double-clicking the HTML file may not work.
+
+**Evidence notice:** The initial dataset contains only a few provisional signals. Public anecdotes, founder claims, and proposed links are **not independently validated customer demand**.
+
+---
+
+<a id="français"></a>
+## Français
+
+### Ne partez pas d'une idée. Partez d'un problème.
+
+Startup Product Radar est un outil open source d'exploration d'opportunités destiné aux créateurs indépendants. Il rassemble des **signaux publics traçables** afin d'examiner les difficultés des utilisateurs, les solutions existantes et les questions encore ouvertes, sans prétendre prédire le succès d'une entreprise.
+
+**[Ouvrir la démo interactive](https://supplicant-snowstain.github.io/startup-product-radar/)** · [Code du site](web/) · [Méthodologie](METHODOLOGY.md) · [Feuille de route](docs/CURRENT_FOCUS.md)
+
+**Fonctions actuelles :** recherche de signaux provisoires, pages d'exploration avec sources et limites, et carte des relations explicitement présentées comme des hypothèses. Le site propose le chinois, l'anglais et le français.
+
+**Exécution locale :** Clonez le dépôt puis lancez, depuis sa racine :
+
+```bash
+python -m http.server 8000 -d web
+```
+
+Ouvrez `http://localhost:8000`. Le serveur HTTP local permet le chargement des fichiers JSON, ce qui peut échouer lors de l'ouverture directe du fichier HTML.
+
+**Précaution :** Les premiers signaux restent à vérifier. Des témoignages isolés, des déclarations de fondateurs ou des liens hypothétiques ne constituent pas une demande de marché validée.
+
+---
+
+## Project / 项目资料 / Ressources
+
+[Research reports / 每日报告 / Rapports](reports/README.md) · [Public evidence / 公开证据 / Preuves](data/provisional/README.md) · [Web documentation](web/README.md) · [Release criteria](docs/FIRST_USABLE_RELEASE.md) · [GitHub Actions](https://github.com/supplicant-snowstain/startup-product-radar/actions)
+
+**Contributing / 参与贡献 / Contribuer:** Corrections, accessibility improvements, translations, and well-sourced public observations are welcome. Do not upload confidential employer material, credentials, private personal information, or invented user testimony.
+
+**Publishing:** The GitHub Pages workflow builds and tests the site. An automated workflow configuration is not proof of a successful deployment; check the Actions run before treating the URL as live.
