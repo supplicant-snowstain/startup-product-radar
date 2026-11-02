@@ -1,5 +1,8 @@
 # Current Product Focus: Discover → Explore
 
+> **Execution priority update (2026-11-03): Ship a useful Discovery → Exploration experience first. No custom clustering research, algorithm novelty claims, or complex agent orchestration in the current milestone. Use simple search and manual thematic grouping until real user value and sufficient data justify additional methods.**
+
+
 Status: active scope decision (2026-11-03).
 
 ## Mission
