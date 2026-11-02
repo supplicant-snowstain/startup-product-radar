@@ -8,7 +8,7 @@ The displayed signals are generated from `data/provisional/*.json` using:
 PYTHONPATH=tools/startup_lab python -m startup_lab.public_feed --root . --output web/signals.json
 ```
 
-Open `web/index.html` directly to view the checked-in feed. A local HTTP server also works (`python -m http.server 8000 -d web`).
+Use a local HTTP server: `python -m http.server 8000 -d web`, then open http://localhost:8000. Modern browsers block `fetch()` from `file://`, so opening the HTML file directly does not load the data.
 
 The data is explicitly provisional and includes original citations and limitations. Editing data files requires regenerating the feed. The future production workflow must distinguish promotional claims from firsthand user accounts, protect against malicious fields, and preserve links to original source context.
 
