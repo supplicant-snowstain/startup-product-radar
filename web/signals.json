@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "dataset_status": "provisional_only",
+  "count": 3,
+  "signals": [
+    {
+      "id": "signal-ci-test-selection",
+      "title": "Change-aware CI test selection",
+      "domain": "Developer Tools",
+      "user_segment": "CI maintainers and software developers",
+      "problem": "Selecting blocking test suites based on changed code, including test flakiness concerns.",
+      "source_url": "https://news.ycombinator.com/item?id=46345827",
+      "source_locator": "comment by kubanczyk (thread line 27)",
+      "observed_at": "2026-11-03",
+      "source_type": "first_person_public_comment",
+      "review_state": "provisional_not_human_reviewed",
+      "limitations": [
+        "One public comment does not establish prevalence or willingness to pay.",
+        "No source-independent corroboration.",
+        "Need benchmark against existing selective-test solutions."
+      ],
+      "questions": [
+        "How often do teams overspend time on unnecessary tests?",
+        "Which CI vendors already offer test-impact analysis?"
+      ]
+    },
+    {
+      "id": "signal-local-ci-debugging",
+      "title": "Local CI environment reproduction and debugging",
+      "domain": "Developer Tools",
+      "user_segment": "Engineers maintaining CI and infrastructure scripts",
+      "problem": "Repeated pushes to test CI scripts when the CI environment is difficult to reproduce locally.",
+      "source_url": "https://news.ycombinator.com/item?id=46345827",
+      "source_locator": "comment by wojciii and replies (thread lines 48–53)",
+      "observed_at": "2026-11-03",
+      "source_type": "first_person_public_comment",
+      "review_state": "provisional_not_human_reviewed",
+      "limitations": [
+        "A single claimed willingness to pay is not proven conversion.",
+        "Existing container-based CI tooling may already address parts of the problem.",
+        "Need independent user interviews or corroborating published observations before claiming general demand."
+      ],
+      "questions": [
+        "How closely can local execution mirror hosted CI?",
+        "Which workflows cannot easily be reproduced?"
+      ]
+    },
+    {
+      "id": "signal-model-change-notifications",
+      "title": "Tracking model and coding-agent changes",
+      "domain": "AI Developer Tools",
+      "user_segment": "Developers using multiple AI models or coding agents",
+      "problem": "Model retirement, pricing, usage limits and version changes scattered across providers.",
+      "source_url": "https://www.producthunt.com/products/modelpeers",
+      "source_locator": "founder description on Product Hunt product page",
+      "observed_at": "2026-11-03",
+      "source_type": "founder_claim",
+      "review_state": "provisional_not_human_reviewed",
+      "limitations": [
+        "Founder story is not independently verified user need.",
+        "The product existing does not prove adoption or retention.",
+        "May overlap with changelogs, release feeds and existing monitoring tools."
+      ],
+      "questions": [
+        "Are provider feeds enough for developers?",
+        "Which changes trigger measurable workflow failures?"
+      ]
+    }
+  ],
+  "disclaimer": "Public source leads. Not independently corroborated or validated customer demand."
+}
