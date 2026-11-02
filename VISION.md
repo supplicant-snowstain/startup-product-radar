@@ -35,7 +35,7 @@ Move from product discovery to evidence-backed decisions:
 ## First wedge: User Pain Explorer
 Input: a user segment, task or category (e.g., independent consultants managing invoices).
 Output: dated, sourced problem statements, workarounds, representative examples, existing alternatives, missing evidence and 2–3 testable hypotheses.
-Success is measured by whether real builders discover relevant, previously unrecognized pains and can run a sensible validation test—not by the quantity of generated ideas.
+Success is measured initially by reproducible, evidence-grounded outputs on curated benchmark cases, accurate source attribution, sensible counterarguments and useful experimental recommendations—not by the volume of generated ideas. External user studies are optional, not a prerequisite.
 
 ## Explicit non-goals for the first release
 No autonomous startup investment advice, no definitive market-size estimates from scraped mentions, no guaranteed PMF scores, no paywalled scraping, no automatic claims of user interviews, and no employer-specific consulting.
@@ -47,4 +47,7 @@ No autonomous startup investment advice, no definitive market-size estimates fro
 - Can a lightweight, file-based evidence store stay trustworthy as records accumulate?
 
 ## Decision gates
-Advance from curated knowledge base to a working tool only after observing users complete real discovery or validation tasks. Each gate and its outcome should be recorded in ROADMAP.md and the evidence ledger.
+Advance from curated knowledge base to a working tool based on objective engineering evaluations: data provenance, retrieval precision, counterevidence coverage, reproducibility and benchmark performance. External user studies are optional. Each gate and its outcome should be recorded in ROADMAP.md and the evidence ledger.
+
+## Testing philosophy
+Build an automated **Startup Hypothesis Testing Lab** that tests claims against public evidence, comparisons and scenarios. Tests measure evidence coverage, competitive differentiation, cost assumptions and contradictions; simulations are labeled as hypothetical and cannot establish actual demand or product-market fit. No external user recruitment is required for the engineering MVP.
