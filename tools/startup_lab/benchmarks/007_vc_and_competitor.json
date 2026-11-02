@@ -1,0 +1,24 @@
+{
+  "id": "007_vc_and_competitor",
+  "hypothesis": "Synthetic startup evaluation fixture",
+  "evidence": [
+    {
+      "id": "e1",
+      "url": "https://example.org/synthetic-vc-0",
+      "observed_at": "2026-11-03",
+      "type": "investor_claim",
+      "dimension": "user_need",
+      "stance": "supports",
+      "claim": "Synthetic vc example; not verified"
+    },
+    {
+      "id": "e2",
+      "url": "https://example.org/synthetic-comp-1",
+      "observed_at": "2026-11-03",
+      "type": "independent",
+      "dimension": "competitor",
+      "stance": "context",
+      "claim": "Synthetic comp example; not verified"
+    }
+  ]
+}
