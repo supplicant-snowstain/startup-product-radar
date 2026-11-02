@@ -11,11 +11,19 @@ def main():
     ev.add_argument('--output')
     bench=sub.add_parser('benchmark')
     bench.add_argument('--cases',default='tools/startup_lab/benchmarks/cases.json')
+    promote_parser=sub.add_parser('promote',help='Promote a manually reviewed candidate to the evidence store')
+    promote_parser.add_argument('file')
+    promote_parser.add_argument('--output-dir',default='data/evidence')
     args=parser.parse_args()
     if args.command=='evaluate':
         report=evaluate_file(args.file)
         print(json.dumps(report,ensure_ascii=False,indent=2))
         if args.output: Path(args.output).write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+    elif args.command=='promote':
+        from .extraction import promote
+        result=promote(args.file,args.output_dir)
+        print(json.dumps(result,ensure_ascii=False,indent=2))
+        if not result['accepted']: raise SystemExit(1)
     else:
         p=Path(args.cases); cases=json.loads(p.read_text(encoding='utf-8')); passed=0
         for case in cases:
