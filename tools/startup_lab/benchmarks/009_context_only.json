@@ -1,0 +1,24 @@
+{
+  "id": "009_context_only",
+  "hypothesis": "Synthetic startup evaluation fixture",
+  "evidence": [
+    {
+      "id": "e1",
+      "url": "https://example.org/synthetic-comp-0",
+      "observed_at": "2026-11-03",
+      "type": "independent",
+      "dimension": "competitor",
+      "stance": "context",
+      "claim": "Synthetic comp example; not verified"
+    },
+    {
+      "id": "e2",
+      "url": "https://example.org/synthetic-context-1",
+      "observed_at": "2026-11-03",
+      "type": "primary",
+      "dimension": "distribution",
+      "stance": "context",
+      "claim": "Synthetic context example; not verified"
+    }
+  ]
+}
