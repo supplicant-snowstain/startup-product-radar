@@ -1,0 +1,33 @@
+{
+  "id": "signal-model-change-notifications",
+  "kind": "founder_problem_hypothesis",
+  "title": "Tracking model and coding-agent changes",
+  "domain": "AI Developer Tools",
+  "user_segment": "Developers using multiple AI models or coding agents",
+  "problem": "Model retirement, pricing, usage limits and version changes scattered across providers.",
+  "statement": "The founder of Modelpeers describes discovering AI model sunsets and pricing/plan changes late and positions the product as a notification feed.",
+  "source_url": "https://www.producthunt.com/products/modelpeers",
+  "source_locator": "founder description on Product Hunt product page",
+  "source_type": "founder_claim",
+  "source_context_date": "2026-11 (listing observed; exact launch day not independently established)",
+  "observed_at": "2026-11-03",
+  "review_state": "ai_source_read_only",
+  "human_reviewed": false,
+  "products": [
+    {
+      "name": "Modelpeers",
+      "url": "https://www.producthunt.com/products/modelpeers",
+      "relation": "proposed_solution"
+    }
+  ],
+  "counterevidence": [],
+  "limitations": [
+    "Founder story is not independently verified user need.",
+    "The product existing does not prove adoption or retention.",
+    "May overlap with changelogs, release feeds and existing monitoring tools."
+  ],
+  "questions": [
+    "Are provider feeds enough for developers?",
+    "Which changes trigger measurable workflow failures?"
+  ]
+}
