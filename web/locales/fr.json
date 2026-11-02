@@ -1,0 +1,93 @@
+{
+  "ui": {
+    "navExplore": "Explorer les signaux",
+    "navMethod": "Méthode",
+    "heroKicker": "● UN GUIDE POUR LES CRÉATEURS CURIEUX",
+    "hero": "Ne partez pas d'une <i>idée.</i><br>Partez d'un <mark>problème.</mark>",
+    "heroDesc": "Repérez les difficultés, remontez aux sources et comprenez les besoins auxquels les solutions actuelles ne répondent pas encore.",
+    "heroAction": "Explorer les signaux ↗",
+    "heroFine": "OBSERVATIONS ≠ DEMANDE VALIDÉE · OPEN SOURCE",
+    "boardKicker": "01 / TABLEAU DES SIGNAUX",
+    "boardTitle": "Là où se trouvent les difficultés.",
+    "boardDesc": "Des pistes de recherche sourcées, pas des opportunités déjà validées.",
+    "search": "Rechercher un problème, ex. CI",
+    "all": "Tout",
+    "dev": "Outils développeurs",
+    "ai": "Outils IA",
+    "empty": "Aucun signal correspondant.",
+    "methodTitle": "De la curiosité,<br>et des preuves.",
+    "methodObserve": "Partir d'une source publique, pas d'une statistique inventée.",
+    "methodConnect": "Explorer les liens entre utilisateurs, difficultés et solutions.",
+    "methodQuestion": "Rendre visibles les incertitudes et les preuves manquantes.",
+    "footDesc": "Aider les créateurs indépendants à réfléchir, pas à prédire les gagnants.",
+    "source": "Code source ↗",
+    "provisional": "À VÉRIFIER",
+    "back": "← Tous les signaux",
+    "exploreKicker": "02 / EXPLORATION · VERSION ALPHA",
+    "loading": "Chargement du signal…",
+    "provisionalLong": "PROVISOIRE · DEMANDE NON VALIDÉE",
+    "original": "01 / OBSERVATION INITIALE",
+    "follow": "Remonter à la source.",
+    "open": "Ouvrir la source publique ↗",
+    "quality": "QUALITÉ DES PREUVES",
+    "known": "Ce que nous savons — et ignorons.",
+    "caveat": "Une seule source ne prouve pas la demande. Les informations peuvent être incomplètes ou anciennes.",
+    "continue": "02 / POURSUIVRE L'EXPLORATION",
+    "questionsTitle": "Les bonnes questions font émerger des idées.",
+    "related": "03 / PISTES CONNEXES",
+    "neighborhood": "Explorer les problèmes voisins.",
+    "relatedDesc": "Signaux du même domaine : une proximité de thème ne prouve pas que les besoins sont identiques.",
+    "more": "← Découvrir d'autres signaux",
+    "observed": "OBSERVÉ LE",
+    "locator": "EMPLACEMENT DE LA SOURCE",
+    "none": "Non renseigné",
+    "notAvailable": "Signal indisponible",
+    "invalid": "Identifiant absent ou incorrect. Revenez au tableau.",
+    "missing": "Ce signal ne figure pas dans les données publiques actuelles.",
+    "noQuestions": "Aucune question documentée.",
+    "noRelated": "Aucun autre signal dans ce domaine.",
+    "noLimits": "Informations insuffisantes sur la fiabilité.",
+    "loadFailed": "Impossible de charger les données",
+    "originalText": "Les résumés sont traduits ; la source originale conserve sa langue.",
+    "devDomain": "Outils développeurs",
+    "aiDomain": "Outils IA"
+  },
+  "signals": {
+    "signal-ci-test-selection": {
+      "title": "Sélection intelligente des tests CI",
+      "problem": "Un développeur suggère de sélectionner les tests CI selon le code modifié et leur fiabilité, plutôt que de tout exécuter.",
+      "questions": [
+        "Quels tests ralentissent réellement les équipes ?",
+        "Quelles solutions d'analyse d'impact existent déjà ?"
+      ],
+      "limitations": [
+        "Un seul commentaire ne prouve pas une demande généralisée.",
+        "Pas de corroboration indépendante ni de mesures d'adoption."
+      ]
+    },
+    "signal-local-ci-debugging": {
+      "title": "Déboguer la CI avant de pousser du code",
+      "problem": "Un développeur souhaite reproduire son environnement CI en local pour éviter des commits répétés pendant le débogage.",
+      "questions": [
+        "Quelles différences subsistent entre environnements locaux et CI hébergée ?",
+        "Que couvrent déjà les outils à base de conteneurs ?"
+      ],
+      "limitations": [
+        "Témoignage individuel, non représentatif.",
+        "Une intention de payer déclarée ne constitue pas un achat."
+      ]
+    },
+    "signal-model-change-notifications": {
+      "title": "Suivre les changements des modèles IA",
+      "problem": "Le fondateur de Modelpeers décrit la difficulté à suivre les retraits de modèles, les prix et les limites d'utilisation.",
+      "questions": [
+        "Quels changements perturbent réellement les développeurs ?",
+        "Les journaux de mises à jour officiels suffisent-ils ?"
+      ],
+      "limitations": [
+        "Il s'agit d'une déclaration du fondateur, pas d'un témoignage client indépendant.",
+        "Aucune donnée d'adoption ou de rétention vérifiée."
+      ]
+    }
+  }
+}
