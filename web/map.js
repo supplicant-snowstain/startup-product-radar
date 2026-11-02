@@ -10,7 +10,7 @@ function node(tag,className,label){const n=document.createElement(tag);if(classN
 function render(){if(!feed||!graph)return;const id=new URLSearchParams(location.search).get("id"),current=feed.signals.find(x=>x.id===id);if(!current)return;const t=copy[I.lang]||copy.en;root.replaceChildren();root.append(node("h2","",t.title),node("p","",t.subtitle));
 const stage=node("div","map-stage",""),center=node("div","map-center","");
 center.append(node("small","",t.problem),node("strong","",I.localSignal(current).title));stage.append(center);
-const links=graph.edges.filter(e=>e.from===id||e.to===id&&e.verification==="editorial_hypothesis").filter(e=>e.verification==="editorial_hypothesis");
+const links=graph.edges.filter(e=>(e.from===id||e.to===id)&&e.verification==="editorial_hypothesis");
 const others=[];for(const e of links){const other=feed.signals.find(s=>s.id===(e.from===id?e.to:e.from));if(other&&!others.some(x=>x.id===other.id))others.push(other)}
 const nodes=node("div","map-neighbors","");for(const other of others){const a=node("a","map-node","");a.href="./explore.html?id="+encodeURIComponent(other.id);a.append(node("small","",t.relation),node("strong","",I.localSignal(other).title),node("span","",t.open));nodes.append(a)}
 if(!others.length)nodes.append(node("p","",t.none));stage.append(nodes);
