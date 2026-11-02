@@ -1,0 +1,15 @@
+{
+  "id": "002_only_vc",
+  "hypothesis": "Synthetic startup evaluation fixture",
+  "evidence": [
+    {
+      "id": "e1",
+      "url": "https://example.org/synthetic-vc-0",
+      "observed_at": "2026-11-03",
+      "type": "investor_claim",
+      "dimension": "user_need",
+      "stance": "supports",
+      "claim": "Synthetic vc example; not verified"
+    }
+  ]
+}
