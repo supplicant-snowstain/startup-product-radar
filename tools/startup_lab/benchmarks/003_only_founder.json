@@ -1,0 +1,15 @@
+{
+  "id": "003_only_founder",
+  "hypothesis": "Synthetic startup evaluation fixture",
+  "evidence": [
+    {
+      "id": "e1",
+      "url": "https://example.org/synthetic-founder-0",
+      "observed_at": "2026-11-03",
+      "type": "founder_claim",
+      "dimension": "user_need",
+      "stance": "supports",
+      "claim": "Synthetic founder example; not verified"
+    }
+  ]
+}
