@@ -1,0 +1,35 @@
+name: Startup Lab Tests
+on:
+  push:
+    paths:
+      - 'tools/startup_lab/**'
+      - 'data/evidence/**'
+      - '.github/workflows/startup-lab-tests.yml'
+  pull_request:
+    paths:
+      - 'tools/startup_lab/**'
+      - 'data/evidence/**'
+      - '.github/workflows/startup-lab-tests.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Unit tests
+        env:
+          PYTHONPATH: tools/startup_lab
+        run: python -m unittest discover -s tools/startup_lab/tests -v
+      - name: Synthetic benchmark
+        env:
+          PYTHONPATH: tools/startup_lab
+        run: python -m startup_lab benchmark
+      - name: Repository evidence audit
+        env:
+          PYTHONPATH: tools/startup_lab
+        run: python -c "from startup_lab.repository import audit_repository; print(audit_repository('.'))"
