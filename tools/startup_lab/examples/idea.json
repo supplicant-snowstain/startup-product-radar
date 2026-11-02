@@ -1,0 +1,33 @@
+{
+  "id": "example-email-workflow",
+  "hypothesis": "An email workflow assistant might reduce routine sorting time (synthetic fixture)",
+  "evidence": [
+    {
+      "id": "e1",
+      "url": "https://example.org/synthetic-need",
+      "observed_at": "2026-11-03",
+      "type": "user_report",
+      "dimension": "user_need",
+      "stance": "supports",
+      "claim": "Synthetic need example; not verified"
+    },
+    {
+      "id": "e2",
+      "url": "https://example.org/synthetic-comp",
+      "observed_at": "2026-11-03",
+      "type": "independent",
+      "dimension": "competitor",
+      "stance": "context",
+      "claim": "Synthetic comp example; not verified"
+    },
+    {
+      "id": "e3",
+      "url": "https://example.org/synthetic-counter",
+      "observed_at": "2026-11-03",
+      "type": "user_report",
+      "dimension": "pricing",
+      "stance": "contradicts",
+      "claim": "Synthetic counter example; not verified"
+    }
+  ]
+}
