@@ -1,0 +1,89 @@
+[
+  {
+    "id": "001_complete_evidence",
+    "file": "001_complete_evidence.json",
+    "expected_status": "evidence_review_ready",
+    "expected_risk_flags": []
+  },
+  {
+    "id": "002_only_vc",
+    "file": "002_only_vc.json",
+    "expected_status": "insufficient_evidence",
+    "expected_risk_flags": [
+      "NO_INDEPENDENT_USER_NEED_EVIDENCE",
+      "COMPETITOR_COVERAGE_MISSING",
+      "NO_COUNTEREVIDENCE_RECORDED",
+      "INVESTOR_SIGNAL_NOT_DEMAND_VALIDATION"
+    ]
+  },
+  {
+    "id": "003_only_founder",
+    "file": "003_only_founder.json",
+    "expected_status": "insufficient_evidence",
+    "expected_risk_flags": [
+      "NO_INDEPENDENT_USER_NEED_EVIDENCE",
+      "COMPETITOR_COVERAGE_MISSING",
+      "NO_COUNTEREVIDENCE_RECORDED"
+    ]
+  },
+  {
+    "id": "004_need_only",
+    "file": "004_need_only.json",
+    "expected_status": "insufficient_evidence",
+    "expected_risk_flags": [
+      "COMPETITOR_COVERAGE_MISSING",
+      "NO_COUNTEREVIDENCE_RECORDED"
+    ]
+  },
+  {
+    "id": "005_no_competitor",
+    "file": "005_no_competitor.json",
+    "expected_status": "insufficient_evidence",
+    "expected_risk_flags": [
+      "COMPETITOR_COVERAGE_MISSING"
+    ]
+  },
+  {
+    "id": "006_no_counter",
+    "file": "006_no_counter.json",
+    "expected_status": "insufficient_evidence",
+    "expected_risk_flags": [
+      "NO_COUNTEREVIDENCE_RECORDED"
+    ]
+  },
+  {
+    "id": "007_vc_and_competitor",
+    "file": "007_vc_and_competitor.json",
+    "expected_status": "insufficient_evidence",
+    "expected_risk_flags": [
+      "NO_INDEPENDENT_USER_NEED_EVIDENCE",
+      "NO_COUNTEREVIDENCE_RECORDED",
+      "INVESTOR_SIGNAL_NOT_DEMAND_VALIDATION"
+    ]
+  },
+  {
+    "id": "008_need_vc_competitor_counter",
+    "file": "008_need_vc_competitor_counter.json",
+    "expected_status": "evidence_review_ready",
+    "expected_risk_flags": []
+  },
+  {
+    "id": "009_context_only",
+    "file": "009_context_only.json",
+    "expected_status": "insufficient_evidence",
+    "expected_risk_flags": [
+      "NO_INDEPENDENT_USER_NEED_EVIDENCE",
+      "NO_COUNTEREVIDENCE_RECORDED"
+    ]
+  },
+  {
+    "id": "010_no_evidence",
+    "file": "010_no_evidence.json",
+    "expected_status": "insufficient_evidence",
+    "expected_risk_flags": [
+      "NO_INDEPENDENT_USER_NEED_EVIDENCE",
+      "COMPETITOR_COVERAGE_MISSING",
+      "NO_COUNTEREVIDENCE_RECORDED"
+    ]
+  }
+]
