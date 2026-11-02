@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Experiment",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "insight_id",
+    "hypothesis",
+    "method",
+    "success_criterion",
+    "failure_criterion",
+    "status"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^exp-[0-9]{3,}$"
+    },
+    "insight_id": {
+      "type": "string"
+    },
+    "hypothesis": {
+      "type": "string"
+    },
+    "method": {
+      "type": "string"
+    },
+    "target_segment": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "success_criterion": {
+      "type": "string"
+    },
+    "failure_criterion": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "proposed",
+        "running",
+        "completed",
+        "cancelled"
+      ]
+    },
+    "started_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "completed_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "observations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "outcome": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}
