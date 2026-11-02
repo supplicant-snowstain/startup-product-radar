@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "kind": "illustrative_editorial_explanation",
+  "note": "Scenarios are illustrative, not direct quotations, founder motivations, or established market demand.",
+  "stories": {
+    "signal-ci-test-selection": {
+      "en": {
+        "who": "Imagine an engineer waiting for a long test pipeline after changing just a few lines.",
+        "friction": "The practical question: must every test run after every small change?",
+        "idea": "A tool could suggest which tests matter for a specific change, while keeping risky changes well covered.",
+        "why": "Less waiting could mean faster feedback for a team.",
+        "unknown": "Would engineers trust selective tests? Which solutions already do this?"
+      },
+      "zh": {
+        "who": "想象你只改了几行代码，却还要等一整套测试跑完。",
+        "friction": "真正让人困扰的是：每次小改动，都有必要跑完所有测试吗？",
+        "idea": "一个可能的产品思路：根据代码变更推荐需要运行的测试，同时对风险较高的变更保留完整检查。",
+        "why": "如果团队能少等一些时间，就可能更快发现问题、继续开发。",
+        "unknown": "开发者会相信这种选择吗？已有工具解决得怎么样？"
+      },
+      "fr": {
+        "who": "Imaginez un développeur qui modifie quelques lignes et attend toute une batterie de tests.",
+        "friction": "Faut-il vraiment exécuter tous les tests après chaque petit changement ?",
+        "idea": "Une piste de produit : proposer les tests utiles selon le changement, tout en gardant une couverture suffisante pour les risques élevés.",
+        "why": "Moins d'attente pourrait accélérer le retour d'information.",
+        "unknown": "Les équipes feraient-elles confiance à cette sélection ? Quelles solutions existent déjà ?"
+      }
+    },
+    "signal-local-ci-debugging": {
+      "en": {
+        "who": "Imagine a developer fixing a CI script and pushing another commit just to see if it works.",
+        "friction": "The feedback loop is slow because the hosted CI environment is hard to reproduce locally.",
+        "idea": "A possible tool could recreate the CI environment on a laptop and let developers debug before pushing.",
+        "why": "It could shorten frustrating trial-and-error loops.",
+        "unknown": "How faithfully can local tools match a hosted runner? Is the pain frequent enough?"
+      },
+      "zh": {
+        "who": "想象你在修改 CI 脚本。每改一次，就得推送代码、等远端跑完，才知道哪里出了错。",
+        "friction": "麻烦不在写脚本，而在于本地很难重现远端 CI 的运行环境。",
+        "idea": "一个可能的产品：把 CI 环境尽量搬到本地，让开发者在提交之前就能调试。",
+        "why": "如果减少这种反复尝试，开发过程可能省下大量等待与挫败。",
+        "unknown": "本地到底能模拟到什么程度？这种困扰有多普遍？"
+      },
+      "fr": {
+        "who": "Imaginez un développeur qui pousse un nouveau commit simplement pour tester une correction de CI.",
+        "friction": "La boucle d'essais est lente car l'environnement CI hébergé est difficile à reproduire localement.",
+        "idea": "Un outil pourrait reproduire la CI sur un ordinateur et permettre de déboguer avant le push.",
+        "why": "Cela pourrait réduire les allers-retours frustrants.",
+        "unknown": "Jusqu'où peut-on reproduire l'environnement hébergé ? Cette difficulté est-elle fréquente ?"
+      }
+    },
+    "signal-model-change-notifications": {
+      "en": {
+        "who": "Imagine using several AI providers and discovering a model is retired only when a workflow breaks.",
+        "friction": "Model changes, pricing and usage limits can be scattered across provider announcements.",
+        "idea": "Modelpeers presents a product direction: bring these changes into one place and notify people.",
+        "why": "Teams may avoid surprises, but the founder's narrative does not prove that customers need it.",
+        "unknown": "Who would pay for alerts instead of checking changelogs or RSS?"
+      },
+      "zh": {
+        "who": "想象你在项目里用了好几个 AI 模型。某天一个模型停用了，你直到流程出错才发现。",
+        "friction": "模型下线、价格和额度变化，可能散落在不同平台的公告中。",
+        "idea": "Modelpeers 提出的产品方向，是集中整理这些变化并提供提醒。",
+        "why": "这也许能减少意外中断，但目前只有创始人的描述，还不能证明用户愿意买单。",
+        "unknown": "相比官方公告或 RSS，谁真的需要额外的付费提醒？"
+      },
+      "fr": {
+        "who": "Imaginez utiliser plusieurs fournisseurs d'IA et découvrir un retrait de modèle quand un flux de travail tombe en panne.",
+        "friction": "Versions, prix et limites peuvent être dispersés dans de nombreuses annonces.",
+        "idea": "Modelpeers propose de réunir ces changements et d'envoyer des alertes.",
+        "why": "Cela pourrait éviter les mauvaises surprises, mais le discours du fondateur ne prouve pas la demande.",
+        "unknown": "Qui paierait des alertes plutôt que de suivre les journaux de mises à jour ?"
+      }
+    }
+  }
+}
