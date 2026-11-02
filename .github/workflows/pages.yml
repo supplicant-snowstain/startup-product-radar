@@ -5,6 +5,7 @@ on:
     paths:
       - 'web/**'
       - 'data/provisional/**'
+      - 'data/products/**'
       - 'tools/startup_lab/**'
       - '.github/workflows/pages.yml'
   workflow_dispatch:
@@ -34,6 +35,10 @@ jobs:
         env:
           PYTHONPATH: tools/startup_lab
         run: python -m startup_lab.public_feed --root . --output web/signals.json
+      - name: Generate product feed
+        env:
+          PYTHONPATH: tools/startup_lab
+        run: python -m startup_lab.product_feed --root . --output web/products.json
       - name: Check feed
         run: python -c "import json; d=json.load(open('web/signals.json')); assert d['count']==len(d['signals']); print('Signals:',d['count'])"
       - uses: actions/configure-pages@v5
