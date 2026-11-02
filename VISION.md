@@ -1,5 +1,8 @@
 # Vision — Startup Product Radar
 
+> **Current priority (2026-11-03): Opportunity Discovery and Opportunity Exploration.** The authoritative active scope is [docs/CURRENT_FOCUS.md](docs/CURRENT_FOCUS.md). Idea Evaluation and Hypothesis Testing remain future phases. Existing evaluators are supporting infrastructure, not the primary user experience.
+
+
 Status: exploratory product thesis (2026-11-03). Not a claim of product-market fit.
 
 ## One-line mission
