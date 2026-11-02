@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Insight",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "user_segment",
+    "need_hypothesis",
+    "status",
+    "supporting_evidence_ids",
+    "contradicting_evidence_ids",
+    "falsification_test",
+    "updated_at"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^ins-[0-9]{3,}$"
+    },
+    "user_segment": {
+      "type": "string"
+    },
+    "need_hypothesis": {
+      "type": "string",
+      "minLength": 1
+    },
+    "status": {
+      "enum": [
+        "proposed",
+        "investigating",
+        "supported",
+        "contradicted",
+        "retired"
+      ]
+    },
+    "product_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "supporting_evidence_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "contradicting_evidence_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "alternative_explanations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "falsification_test": {
+      "type": "string"
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date"
+    }
+  }
+}
