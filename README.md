@@ -1,31 +1,34 @@
-# Startup Product Radar
+# ✳ Startup Product Radar
 
-An open research library for understanding emerging startup products and real user needs across the world.
+**Don't start with an idea. Start with a problem.**
 
-## Research mission
+An open-source opportunity discovery workbench for independent builders. Explore publicly observed user friction, trace original sources, and investigate adjacent products and unanswered questions — without treating anecdotes as validated demand.
 
-Discover how founders identify problems, validate early products, respond to user feedback, and achieve lasting value. Prioritize Silicon Valley and the United States while covering Europe, China, Japan, India and other regions.
+## ✦ Experience the prototype
 
-Both AI-driven and non-AI products qualify. A product's user value matters more than its underlying technology, publicity or funding.
+**[Explore the landing page source →](web/index.html)** · [Product roadmap](docs/CURRENT_FOCUS.md) · [First usable release criteria](docs/FIRST_USABLE_RELEASE.md)
 
-## Knowledge base
+![Status: alpha](https://img.shields.io/badge/status-alpha-c4e86e) ![License: pending](https://img.shields.io/badge/license-not%20yet%20specified-lightgrey)
 
-- [Daily discovery reports](reports/README.md)
-- [Longitudinal product profiles](products/README.md)
-- [Founder journeys](founders/README.md)
-- [Cross-product research insights](insights/README.md)
-- [Weekly trend analysis](trends/README.md)
-- [Structured product index](index/products.csv)
-- [Research methodology](METHODOLOGY.md)
+**Local preview:** download/clone this repository and open `web/index.html` in a browser. No build, API key, account, or server is required.
 
-## Research standards
+> **Important:** The first three example cards link to attributable public-source research leads and are clearly labeled **provisional**. They have not undergone independent corroboration or formal review. A beautiful UI is not itself evidence quality. The site is not deployed yet; do not interpret the link above as a live website.
 
-Use public, attributable sources. Separate observed user behavior, founder claims, VC signals and analytical hypotheses. Include falsifiable statements, counterexamples and dated references. Funding is not proof of product-market fit.
+### What you can do today
+- **Discover** provisional problem signals by area and keyword.
+- **Explore** each signal with a citation, limitations and follow-up questions.
+- **Inspect the data** in [data/provisional](data/provisional/README.md) and the [research index](research/2026-11-03-public-signals.md).
+- **Run the developer toolkit** via [Startup Lab](tools/startup_lab/README.md).
 
-## Publication policy
+### Active stages
+**1. Opportunity Discovery → 2. Opportunity Exploration**. Idea Evaluation and Hypothesis Testing are deferred. See [current focus](docs/CURRENT_FOCUS.md). No new clustering algorithm is necessary for this release.
 
-This is a fully independent public research project. Publish only information suitable for a public audience. Exclude private workplace details, confidential documents, nonpublic business information, personal records, credentials and proprietary materials. Avoid company-specific internal business recommendations.
+### Open research library
+[Daily reports](reports/README.md) · [Products](products/README.md) · [Founder journeys](founders/README.md) · [Cross-product insights](insights/README.md) · [Trends](trends/README.md) · [Structured index](index/products.csv) · [Research methodology](METHODOLOGY.md).
 
-## Daily research task
+**Research safeguards:** cite public sources, distinguish firsthand users / founders / investors / analysis, preserve counterevidence and dates; funding and product launches do not prove PMF. This independent public repository excludes private employer information, nonpublic documents, credentials, and proprietary material.
 
-An existing scheduled task runs at approximately 08:00 Europe/Paris, producing a Chinese-language daily report and attempting to archive its outputs here. Actual synchronization is confirmed by successful GitHub commits, not by the schedule alone.
+A scheduled daily report is configured around 08:00 Europe/Paris. GitHub archival only counts as complete when corresponding commits are verified.
+
+## Contributing
+Issues and pull requests for source corrections, accessibility, design, data schemas and workflow quality are welcome. Do not submit invented customer quotes, sensitive information, or copyrighted page dumps. Any proposed need should link to original public evidence and state what remains unknown.
