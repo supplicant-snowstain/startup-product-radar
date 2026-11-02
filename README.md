@@ -19,6 +19,8 @@ Startup Product Radar 是面向独立开发者的开源创业机会探索工具�
 
 **[进入交互网页](https://supplicant-snowstain.github.io/startup-product-radar/)** · [查看网页源码](web/) · [研究方法](METHODOLOGY.md) · [路线图](docs/CURRENT_FOCUS.md)
 
+**新增 Product Discovery：** 网站已加入新产品区域与产品数据接口，但当前产品库尚无经过来源整理的产品条目。每日研究任务的结果还没有经过验证的自动入库链路，不应理解为已经每天更新网站。
+
 **现在能做什么？** 浏览并搜索公开问题线索；点击卡片进入独立探索页；查看原始来源、证据局限和待研究问题；通过 Opportunity Map 探索明确标注的相关关系。网页支持中文、英文、法文切换。
 
 **本地运行**：克隆仓库后，在仓库根目录运行：
@@ -42,6 +44,8 @@ Startup Product Radar is an open-source opportunity exploration workbench for in
 
 **[Launch interactive demo](https://supplicant-snowstain.github.io/startup-product-radar/)** · [Web source](web/) · [Research methodology](METHODOLOGY.md) · [Roadmap](docs/CURRENT_FOCUS.md)
 
+**Product Discovery:** A new-product panel and publishing feed have been added. The sourced product dataset is currently empty; the scheduled daily report has not yet been confirmed to automatically populate the website.
+
 **What can you do?** Browse and search provisional signals, open evidence-backed exploration pages, inspect source links and limitations, and navigate explicitly labeled hypotheses in the Opportunity Map. The website offers Chinese, English, and French.
 
 **Run locally:** Clone the repository, then from the repository root:
@@ -64,6 +68,8 @@ Open `http://localhost:8000`. A local HTTP server is required to fetch JSON data
 Startup Product Radar est un outil open source d'exploration d'opportunités destiné aux créateurs indépendants. Il rassemble des **signaux publics traçables** afin d'examiner les difficultés des utilisateurs, les solutions existantes et les questions encore ouvertes, sans prétendre prédire le succès d'une entreprise.
 
 **[Ouvrir la démo interactive](https://supplicant-snowstain.github.io/startup-product-radar/)** · [Code du site](web/) · [Méthodologie](METHODOLOGY.md) · [Feuille de route](docs/CURRENT_FOCUS.md)
+
+**Découverte de produits :** Un espace dédié et un flux de données sont disponibles, mais aucune fiche produit sourcée n'a encore été publiée. La mise à jour automatique depuis la veille quotidienne n'est pas encore validée.
 
 **Fonctions actuelles :** recherche de signaux provisoires, pages d'exploration avec sources et limites, et carte des relations explicitement présentées comme des hypothèses. Le site propose le chinois, l'anglais et le français.
 
