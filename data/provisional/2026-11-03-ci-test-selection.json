@@ -1,0 +1,27 @@
+{
+  "id": "signal-ci-test-selection",
+  "kind": "user_problem_signal",
+  "title": "Change-aware CI test selection",
+  "domain": "Developer Tools",
+  "user_segment": "CI maintainers and software developers",
+  "problem": "Selecting blocking test suites based on changed code, including test flakiness concerns.",
+  "statement": "A developer proposes using an LLM to select relevant blocking CI tests and estimate how often new complex tests should run.",
+  "source_url": "https://news.ycombinator.com/item?id=46345827",
+  "source_locator": "comment by kubanczyk (thread line 27)",
+  "source_type": "first_person_public_comment",
+  "source_context_date": "2026-01 (approximate; discussion marked 10 months old as of 2026-11-03)",
+  "observed_at": "2026-11-03",
+  "review_state": "ai_source_read_only",
+  "human_reviewed": false,
+  "products": [],
+  "counterevidence": [],
+  "limitations": [
+    "One public comment does not establish prevalence or willingness to pay.",
+    "No source-independent corroboration.",
+    "Need benchmark against existing selective-test solutions."
+  ],
+  "questions": [
+    "How often do teams overspend time on unnecessary tests?",
+    "Which CI vendors already offer test-impact analysis?"
+  ]
+}
