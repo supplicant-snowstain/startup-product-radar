@@ -1,0 +1,44 @@
+name: Publish Opportunity Explorer
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'web/**'
+      - 'data/provisional/**'
+      - 'tools/startup_lab/**'
+      - '.github/workflows/pages.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: true
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run tests
+        env:
+          PYTHONPATH: tools/startup_lab
+        run: python -m unittest discover -s tools/startup_lab/tests -v
+      - name: Generate public feed
+        env:
+          PYTHONPATH: tools/startup_lab
+        run: python -m startup_lab.public_feed --root . --output web/signals.json
+      - name: Check feed
+        run: python -c "import json; d=json.load(open('web/signals.json')); assert d['count']==len(d['signals']); print('Signals:',d['count'])"
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: web
+      - id: deployment
+        uses: actions/deploy-pages@v4
