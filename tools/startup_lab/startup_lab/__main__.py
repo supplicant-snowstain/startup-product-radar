@@ -31,6 +31,13 @@ def main():
     exploration=sub.add_parser('explore',help='Inspect need, products and evidence')
     exploration.add_argument('need_id')
     exploration.add_argument('--root',default='.')
+    pd=sub.add_parser('discover-public',help='Browse provisional attributed public signals')
+    pd.add_argument('query',nargs='?',default='')
+    pd.add_argument('--root',default='.')
+    pd.add_argument('--limit',type=int,default=20)
+    pe=sub.add_parser('explore-public',help='Explore a provisional source signal')
+    pe.add_argument('signal_id')
+    pe.add_argument('--root',default='.')
     args=parser.parse_args()
     if args.command=='evaluate':
         report=evaluate_file(args.file)
@@ -52,6 +59,12 @@ def main():
         result['source_file']=args.html_file
         result['verification_scope']='text presence in supplied local snapshot only'
         print(json.dumps(result,ensure_ascii=False,indent=2))
+    elif args.command=='discover-public':
+        from .public_opportunities import discover_public
+        print(json.dumps(discover_public(args.root,args.query,args.limit),ensure_ascii=False,indent=2))
+    elif args.command=='explore-public':
+        from .public_opportunities import explore_public
+        print(json.dumps(explore_public(args.root,args.signal_id),ensure_ascii=False,indent=2))
     elif args.command=='discover':
         from .opportunity import discover
         print(json.dumps(discover(args.root,args.query,args.limit),ensure_ascii=False,indent=2))
