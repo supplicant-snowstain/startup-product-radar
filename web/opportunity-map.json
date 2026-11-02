@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "review_state": "editorial_hypothesis_not_verified",
+  "edges": [
+    {
+      "from": "signal-ci-test-selection",
+      "to": "signal-local-ci-debugging",
+      "type": "adjacent_workflow",
+      "reason": "Both concern CI development workflows, but test selection and environment reproduction are distinct problems.",
+      "evidence_ids": [],
+      "verification": "editorial_hypothesis"
+    }
+  ]
+}
