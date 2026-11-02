@@ -13,16 +13,16 @@ Status: hypothesis-driven; ordering matters more than fixed deadlines. No tools 
 
 ## Phase 2 — Useful discovery/search
 **Build:** minimal static site or CLI over versioned JSON/Markdown. Filter by target user, job-to-be-done, sector, first seen date, evidence strength and funding/bootstrapped status. Link every result to evidence.
-**Acceptance:** five external testers can locate and compare relevant products and state why at least one result matters. Collect task completion time and qualitative feedback.
+**Acceptance:** an automated suite of at least 20 documented search tasks returns source-linked relevant results, with measured precision and failure cases.
 
 ## Phase 3 — User Pain Explorer (first analysis tool)
 **Build:** user segment/task input → candidate need clusters → cited examples, workarounds, competitive alternatives, counterevidence, unknowns and falsifiable tests. Use retrieval with citations and a deterministic evidence ledger before introducing optional LLM synthesis.
-**Acceptance:** 5–10 independent builders attempt a real idea-discovery task; at least 4 find a plausible pain worth investigating, can retrieve its sources, and identify a concrete next validation action. Record disagreement and failures rather than hiding them.
+**Acceptance:** a versioned benchmark of at least 20 hypotheses checks attribution, relevant opposing evidence, alternative products, reproducibility and falsifiable next steps. Record disagreement and failures rather than hiding them.
 **Decision:** if the tool produces generic suggestions without supporting evidence, improve the dataset rather than add more agent complexity.
 
 ## Phase 4 — Idea Validation workspace
 **Build:** input an idea, identify riskiest assumptions, compare alternatives, design 1–2-week experiments, maintain outcomes and revised beliefs. Do not confuse hypothetical plans with actual customer interviews.
-**Acceptance:** at least three documented experiments conducted by consenting external builders; record observed outcomes, including rejected ideas.
+**Acceptance:** the engine produces reproducible test plans and executes automated evidence-based checks and clearly labeled scenario/sensitivity tests; real demand remains unverified unless supported by independent observations.
 
 ## Phase 5 — Community contributions and longitudinal research
 **Build:** contributor guide, source submissions, dispute resolution, provenance checks, stable versions and retrospective prediction review.
@@ -44,4 +44,7 @@ Status: hypothesis-driven; ordering matters more than fixed deadlines. No tools 
 - Scope creep → one useful workflow before building an all-purpose agent suite.
 
 ## First two-week experiment (proposed)
-Interview five independent builders about the last idea they evaluated. Ask for the evidence they searched, abandoned alternatives and time spent. Present a manually curated example of User Pain Explorer and have them complete the same task. Capture whether it changes their next action. This is a research plan, not a claim that interviews occurred.
+Create a reproducible benchmark with ten varied startup hypotheses (including promising, weak, and deliberately unsupported examples). For each, specify reference evidence, market alternatives, likely counterexamples, testable assumptions and expected uncertainty. Run the tool against these cases and log citation accuracy, false-confidence errors, retrieval gaps and consistency across repeated runs. No participant recruitment is required.
+
+## Automated Startup Hypothesis Testing Lab
+Modules in order: (1) evidence retrieval and provenance checks; (2) competitor coverage and differentiation test; (3) counterevidence / contradiction audit; (4) cost, pricing and acquisition sensitivity scenarios; (5) hypothesis-level experiment planner. A report must distinguish verified, claimed, inferred and unknown outcomes. Never equate synthetic personas or model-generated opinions with genuine user feedback.
