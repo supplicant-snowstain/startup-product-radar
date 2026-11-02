@@ -1,0 +1,42 @@
+{
+  "id": "008_need_vc_competitor_counter",
+  "hypothesis": "Synthetic startup evaluation fixture",
+  "evidence": [
+    {
+      "id": "e1",
+      "url": "https://example.org/synthetic-need-0",
+      "observed_at": "2026-11-03",
+      "type": "user_report",
+      "dimension": "user_need",
+      "stance": "supports",
+      "claim": "Synthetic need example; not verified"
+    },
+    {
+      "id": "e2",
+      "url": "https://example.org/synthetic-vc-1",
+      "observed_at": "2026-11-03",
+      "type": "investor_claim",
+      "dimension": "user_need",
+      "stance": "supports",
+      "claim": "Synthetic vc example; not verified"
+    },
+    {
+      "id": "e3",
+      "url": "https://example.org/synthetic-comp-2",
+      "observed_at": "2026-11-03",
+      "type": "independent",
+      "dimension": "competitor",
+      "stance": "context",
+      "claim": "Synthetic comp example; not verified"
+    },
+    {
+      "id": "e4",
+      "url": "https://example.org/synthetic-counter-3",
+      "observed_at": "2026-11-03",
+      "type": "user_report",
+      "dimension": "pricing",
+      "stance": "contradicts",
+      "claim": "Synthetic counter example; not verified"
+    }
+  ]
+}
