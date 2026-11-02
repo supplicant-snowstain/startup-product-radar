@@ -1,5 +1,8 @@
 # Evidence-Grounded Opportunity Clustering — Research Plan v0.1
 
+> **Status: deferred research track (2026-11-03).** This plan is retained for future work, not the current implementation priority. Build real data coverage and a usable Opportunity Explorer first. No algorithm performance claims are established.
+
+
 Status: proposed, **not empirically validated**. Scope: Opportunity Discovery and Exploration only.
 
 ## Research question
