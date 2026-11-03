@@ -1,0 +1,42 @@
+{
+  "id": "immich",
+  "name": "Immich",
+  "description": "Self-hosted photo and video management with mobile backup, albums, search and sharing.",
+  "category": "Consumer & Privacy",
+  "website": "https://immich.app/",
+  "source_url": "https://github.com/immich-app/immich",
+  "source_type": "official_open_source_repository",
+  "observed_at": "2026-11-03",
+  "date_precision": "unknown",
+  "verification_status": "provisional",
+  "problem_ids": [],
+  "differentiator": "Offers a self-hosted alternative for managing personal photo and video libraries.",
+  "limitations": [
+    "Self-hosting requires maintenance and backups; the project specifically warns about robust backups.",
+    "Product features are confirmed by its repository; general market demand is not established.",
+    "This is an established product, not a launch from 2026-11-03."
+  ],
+  "story": {
+    "en": {
+      "who": "Imagine years of family photos spread across devices and cloud services.",
+      "pain": "You want search, sharing and backups, but also control over storage.",
+      "solution": "Immich offers a photo library you can run on your own server.",
+      "benefit": "It may give technically comfortable households more control.",
+      "uncertainty": "Are maintenance and backup responsibilities worth the trade-off?"
+    },
+    "zh": {
+      "who": "想象手机和电脑里有很多年的照片，既想随时搜索和分享，又想自己掌握数据。",
+      "pain": "方便的云服务和自己控制照片存储之间，往往需要取舍。",
+      "solution": "Immich 提供可以部署在自己服务器上的照片管理、备份与搜索体验。",
+      "benefit": "对愿意自己维护服务的人来说，可能更有掌控感。",
+      "uncertainty": "维护成本和可靠备份是否会让普通用户望而却步？"
+    },
+    "fr": {
+      "who": "Imaginez des années de photos réparties entre appareils et services cloud.",
+      "pain": "Vous souhaitez sauvegarder et partager sans perdre la maîtrise du stockage.",
+      "solution": "Immich propose une photothèque hébergée sur votre propre serveur.",
+      "benefit": "Cela pourrait offrir davantage de contrôle.",
+      "uncertainty": "La maintenance et les sauvegardes compensent-elles cet avantage ?"
+    }
+  }
+}
