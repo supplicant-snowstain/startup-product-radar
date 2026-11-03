@@ -21,11 +21,15 @@ def check():
         for asset in parser.scripts+parser.styles:
             if asset.startswith(("http://","https://")):continue
             if not (WEB/asset).is_file():errors.append(page+": missing "+asset)
-    for file in ("signals.json","products.json","idea-stories.json","opportunity-map.json"):
+    for file in ("signals.json","products.json","idea-stories.json","opportunity-map.json","site-status.json"):
         try:json.loads((WEB/file).read_text(encoding="utf-8"))
         except (OSError,ValueError) as e:errors.append(file+": "+str(e))
     products=json.loads((WEB/"products.json").read_text(encoding="utf-8"))
     if products.get("count")!=len(products.get("products",[])):errors.append("products.json: count mismatch")
+    if (WEB/"site-status.json").is_file():
+        status=json.loads((WEB/"site-status.json").read_text(encoding="utf-8"))
+        if status.get("products")!=products.get("count"):
+            errors.append("site-status.json: product count mismatch")
     if products.get("count",0)==0:errors.append("products.json: no products to showcase")
     if not (WEB/"locales"/"en.json").is_file():errors.append("Missing fallback English language pack")
     return errors
