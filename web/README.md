@@ -33,3 +33,7 @@ The exploration page displays distinct problem nodes and original-source nodes. 
 ## Human-first idea explanations
 
 The first section on each exploration page answers **why someone might build this** through five short steps: a relatable scenario, the friction, a possible product, potential value, and what is still unknown. These are stored in `web/idea-stories.json` in EN/中文/FR. They are **editorial illustrations, not actual founder testimony, customer quotations, or validated demand**. The cited source remains accessible below the story. Avoid attributing invented intentions to creators. For new records, write source-grounded stories and mark assumptions explicitly.
+
+## Product Discovery → Why this product?
+
+Product cards link to `product.html?id=<product-id>`. The page presents a five-step, plain-language idea story (user situation → friction → product approach → possible benefit → uncertainty), original source, and explicitly documented links to problem signals. Optional product stories live in `data/products/*.json` and are included by the `startup_lab.product_feed` generator. No product is created solely to make the interface look populated: an empty feed is displayed honestly until sourced product records exist. Research narratives must never masquerade as verified founder motivations.
