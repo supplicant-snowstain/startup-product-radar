@@ -59,3 +59,7 @@ The website opens **Idea case studies** by default so visitors see the existing 
 ## Build verification
 
 The Pages workflow now runs `python -m startup_lab.check_site` after regenerating the public JSON feeds. It checks that all local JS/CSS assets referenced by the three HTML pages exist, checks JSON parseability and product feed count, and requires the three existing product examples. It also runs `node --check` on every `web/*.js` source. These are **build-time smoke checks**, not a substitute for live browser tests. If a check fails, the Pages deployment step will not run. A green workflow run and a working Pages URL must still be verified independently.
+
+## Visible deployment freshness
+
+The Pages workflow generates `web/site-status.json` **during deployment**, after rebuilding the public product and problem feeds. It includes the UTC build timestamp, Git commit SHA and counts of products, date-attributed launches, case studies and problem signals. The homepage displays the timestamp and counts with EN/中文/FR wording. A missing manifest appears as an unavailable status, not a fabricated successful deployment. `generated_at_utc` measures when GitHub built the site: **it does not mean that daily research ran, new products were found, or any product was launched that day**. Local previews do not require the generated file; generate it manually using `PYTHONPATH=tools/startup_lab python -m startup_lab.site_status` when needed.
