@@ -49,3 +49,9 @@ PYTHONPATH=tools/startup_lab python -m startup_lab.product_candidates incoming.j
 Candidate entries need `name`, `source_url` (HTTPS), and `observed_at` (ISO date). The staging tool normalizes source URLs, detects repeat source links, and writes only under `data/product_candidates/` with `review_state=pending`, `source_checked=false`. It does **not** claim an actual launch date or publish anything to the website.
 
 After original-source review, a contributor may separately create `data/products/<id>.json` and provide a credible launch date source if classifying the product as `new_launch`. The existing Pages workflow regenerates `web/products.json` upon product-data changes. This is **not yet a verified automatic connection to the ChatGPT daily research task**; collection and approval still need to be wired and tested.
+
+## Deployment and daily-update safeguards
+
+The website opens **Idea case studies** by default so visitors see the existing three readable product stories rather than an empty New launches tab. Product candidates added by scheduled research remain unpublished pending review. Candidate queue validation runs in both `.github/workflows/candidates.yml` and the Pages build workflow. A failed validation should block the static-site deployment, not turn an unverified candidate into a confirmed launch.
+
+**Verification status:** The GitHub integration has not returned any workflow-run result for the checked commit; this does not verify that Pages or candidate CI has executed successfully. Inspect the latest run in GitHub Actions directly, including any test failures, before claiming automation is operational.
