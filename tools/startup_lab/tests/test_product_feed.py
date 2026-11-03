@@ -21,6 +21,22 @@ class ProductFeedTests(unittest.TestCase):
             record={"id":"product-demo","name":"Demo","description":"Example","category":"Tools","source_url":"https://example.org","source_type":"vendor","observed_at":"2026-11-03","date_precision":"unknown","verification_status":"provisional","story":story}
             (folder/"demo.json").write_text(json.dumps(record))
             self.assertEqual(build(d)["products"][0]["story"],story)
+    def test_new_launch_requires_dated_source(self):
+        with tempfile.TemporaryDirectory() as d:
+            directory=Path(d)/"data"/"products"
+            directory.mkdir(parents=True)
+            item={"id":"example","name":"Example","description":"Example product","category":"Tools",
+                  "source_url":"https://example.org/product","source_type":"official",
+                  "observed_at":"2026-11-03","date_precision":"unknown",
+                  "verification_status":"provisional","collection":"new_launch"}
+            file=directory/"example.json"
+            file.write_text(json.dumps(item))
+            with self.assertRaises(ValueError):
+                build(d)
+            item.update({"date_precision":"day","launch_date":"2026-11-02",
+                         "launch_source_url":"https://example.org/release"})
+            file.write_text(json.dumps(item))
+            self.assertEqual(build(d)["products"][0]["collection"],"new_launch")
     def test_bad_record_fails(self):
         with tempfile.TemporaryDirectory() as d:
             p=Path(d)/"data"/"products";p.mkdir(parents=True)
