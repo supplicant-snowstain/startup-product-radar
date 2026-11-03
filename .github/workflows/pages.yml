@@ -6,6 +6,7 @@ on:
       - 'web/**'
       - 'data/provisional/**'
       - 'data/products/**'
+      - 'data/product_candidates/**'
       - 'tools/startup_lab/**'
       - '.github/workflows/pages.yml'
   workflow_dispatch:
@@ -31,6 +32,10 @@ jobs:
         env:
           PYTHONPATH: tools/startup_lab
         run: python -m unittest discover -s tools/startup_lab/tests -v
+      - name: Validate daily candidate queue
+        env:
+          PYTHONPATH: tools/startup_lab
+        run: python -m startup_lab.validate_candidates --root .
       - name: Generate public feed
         env:
           PYTHONPATH: tools/startup_lab
