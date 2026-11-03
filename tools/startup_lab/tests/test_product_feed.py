@@ -37,6 +37,24 @@ class ProductFeedTests(unittest.TestCase):
                          "launch_source_url":"https://example.org/release"})
             file.write_text(json.dumps(item))
             self.assertEqual(build(d)["products"][0]["collection"],"new_launch")
+    def test_rejects_invalid_public_source_url(self):
+        with tempfile.TemporaryDirectory() as d:
+            folder=Path(d)/"data"/"products";folder.mkdir(parents=True)
+            record={"id":"x","name":"X","description":"Demo","category":"Tools",
+                    "source_url":"http://localhost/internal","source_type":"official",
+                    "observed_at":"2026-11-03","date_precision":"unknown",
+                    "verification_status":"provisional"}
+            (folder/"x.json").write_text(json.dumps(record))
+            with self.assertRaises(ValueError):build(d)
+    def test_rejects_impossible_observation_date(self):
+        with tempfile.TemporaryDirectory() as d:
+            folder=Path(d)/"data"/"products";folder.mkdir(parents=True)
+            record={"id":"x","name":"X","description":"Demo","category":"Tools",
+                    "source_url":"https://example.org","source_type":"official",
+                    "observed_at":"2026-02-30","date_precision":"unknown",
+                    "verification_status":"provisional"}
+            (folder/"x.json").write_text(json.dumps(record))
+            with self.assertRaises(ValueError):build(d)
     def test_bad_record_fails(self):
         with tempfile.TemporaryDirectory() as d:
             p=Path(d)/"data"/"products";p.mkdir(parents=True)
