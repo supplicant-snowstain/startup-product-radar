@@ -1,0 +1,42 @@
+{
+  "id": "uv",
+  "name": "uv",
+  "description": "A fast Python package and project manager combining installation, environments, Python versions and project workflows.",
+  "category": "Developer Tools",
+  "website": "https://docs.astral.sh/uv/",
+  "source_url": "https://github.com/astral-sh/uv",
+  "source_type": "official_open_source_repository",
+  "observed_at": "2026-11-03",
+  "date_precision": "unknown",
+  "verification_status": "provisional",
+  "problem_ids": [],
+  "differentiator": "Unifies several Python development workflows in one Rust-based tool.",
+  "limitations": [
+    "The repository documents capabilities but does not prove every developer experiences this pain.",
+    "No verified adoption or willingness-to-pay conclusion is made.",
+    "Not a newly launched product on the observation date."
+  ],
+  "story": {
+    "en": {
+      "who": "Imagine a Python developer switching tools just to install dependencies, select a Python version and run a project.",
+      "pain": "Every handoff adds setup steps and things to remember.",
+      "solution": "uv combines these everyday jobs in one fast tool.",
+      "benefit": "Project setup might feel simpler and faster.",
+      "uncertainty": "Which workflows does it actually replace for different teams?"
+    },
+    "zh": {
+      "who": "想象你正在开始一个 Python 项目：装依赖、切版本、建环境，需要切换好几套工具。",
+      "pain": "每一步都要记不同命令，新人更容易在环境配置上卡住。",
+      "solution": "uv 尝试把这些常见操作放进一个速度很快的工具。",
+      "benefit": "可能让项目启动和维护更顺手。",
+      "uncertainty": "对不同规模的团队，它实际替代了哪些工作流？"
+    },
+    "fr": {
+      "who": "Imaginez devoir jongler entre plusieurs outils pour installer des dépendances et gérer Python.",
+      "pain": "Chaque changement ajoute des étapes de configuration.",
+      "solution": "uv rassemble ces tâches dans un outil rapide.",
+      "benefit": "La mise en place d'un projet pourrait devenir plus simple.",
+      "uncertainty": "Quels usages remplace-t-il réellement selon les équipes ?"
+    }
+  }
+}
