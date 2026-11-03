@@ -13,7 +13,11 @@ def build(root):
             raise ValueError("Unknown verification state: "+str(path))
         if item["date_precision"] not in ("day","month","unknown"):
             raise ValueError("Unknown date precision: "+str(path))
-        products.append({k:item.get(k) for k in ("id","name","description","category","website","source_url","source_type","observed_at","launch_date","date_precision","verification_status","problem_ids","differentiator","limitations","story")})
+        collection=item.get("collection","case_study")
+        if collection not in ("case_study","new_launch"):raise ValueError("Invalid collection: "+str(path))
+        if collection=="new_launch" and (not item.get("launch_date") or item.get("date_precision")!="day" or not item.get("launch_source_url")):
+            raise ValueError("Recent launch requires day-precision launch date and an attributed launch source: "+str(path))
+        products.append({k:item.get(k) for k in ("id","name","description","category","website","source_url","source_type","observed_at","launch_date","date_precision","verification_status","problem_ids","differentiator","limitations","story","collection","launch_source_url")})
     ids=[x["id"] for x in products]
     if len(set(ids))!=len(ids):raise ValueError("Duplicate product IDs")
     products.sort(key=lambda x:(x["observed_at"],x["id"]),reverse=True)
