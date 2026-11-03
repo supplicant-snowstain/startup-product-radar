@@ -28,14 +28,6 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - name: Run tests
-        env:
-          PYTHONPATH: tools/startup_lab
-        run: python -m unittest discover -s tools/startup_lab/tests -v
-      - name: Validate daily candidate queue
-        env:
-          PYTHONPATH: tools/startup_lab
-        run: python -m startup_lab.validate_candidates --root .
       - name: Generate public feed
         env:
           PYTHONPATH: tools/startup_lab
@@ -44,6 +36,14 @@ jobs:
         env:
           PYTHONPATH: tools/startup_lab
         run: python -m startup_lab.product_feed --root . --output web/products.json
+      - name: Validate daily candidate queue
+        env:
+          PYTHONPATH: tools/startup_lab
+        run: python -m startup_lab.validate_candidates --root .
+      - name: Run tests against generated site data
+        env:
+          PYTHONPATH: tools/startup_lab
+        run: python -m unittest discover -s tools/startup_lab/tests -v
       - name: Verify static site and published feeds
         env:
           PYTHONPATH: tools/startup_lab
