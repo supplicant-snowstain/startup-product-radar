@@ -37,3 +37,15 @@ The first section on each exploration page answers **why someone might build thi
 ## Product Discovery → Why this product?
 
 Product cards link to `product.html?id=<product-id>`. The page presents a five-step, plain-language idea story (user situation → friction → product approach → possible benefit → uncertainty), original source, and explicitly documented links to problem signals. Optional product stories live in `data/products/*.json` and are included by the `startup_lab.product_feed` generator. No product is created solely to make the interface look populated: an empty feed is displayed honestly until sourced product records exist. Research narratives must never masquerade as verified founder motivations.
+
+## Daily research staging (initial implementation)
+
+A daily research result can be converted to a JSON array and staged with:
+
+```bash
+PYTHONPATH=tools/startup_lab python -m startup_lab.product_candidates incoming.json --root .
+```
+
+Candidate entries need `name`, `source_url` (HTTPS), and `observed_at` (ISO date). The staging tool normalizes source URLs, detects repeat source links, and writes only under `data/product_candidates/` with `review_state=pending`, `source_checked=false`. It does **not** claim an actual launch date or publish anything to the website.
+
+After original-source review, a contributor may separately create `data/products/<id>.json` and provide a credible launch date source if classifying the product as `new_launch`. The existing Pages workflow regenerates `web/products.json` upon product-data changes. This is **not yet a verified automatic connection to the ChatGPT daily research task**; collection and approval still need to be wired and tested.
