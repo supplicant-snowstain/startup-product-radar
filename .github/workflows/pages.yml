@@ -44,6 +44,10 @@ jobs:
         env:
           PYTHONPATH: tools/startup_lab
         run: python -m unittest discover -s tools/startup_lab/tests -v
+      - name: Generate deployment status manifest
+        env:
+          PYTHONPATH: tools/startup_lab
+        run: python -m startup_lab.site_status --web web --output web/site-status.json
       - name: Verify static site and published feeds
         env:
           PYTHONPATH: tools/startup_lab
