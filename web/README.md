@@ -29,3 +29,7 @@ Edit the matching JSON locale file while keeping the same UI keys in every langu
 The exploration page displays distinct problem nodes and original-source nodes. Explicit editorial relationships are loaded from `web/opportunity-map.json`; the site **does not** infer that a shared category or shared source establishes the same user need. Edges with `verification: editorial_hypothesis` are labeled provisional. The map is responsive and changes interface language with EN/中文/FR. No claim is made that any link establishes market demand.
 
 **For contributors:** add an edge only when you can state its intended semantic type and specific rationale. Do not add evidence IDs for a relationship until the corresponding evidence genuinely documents that relation. The map is a navigation aid, not an opportunity-scoring algorithm.
+
+## Human-first idea explanations
+
+The first section on each exploration page answers **why someone might build this** through five short steps: a relatable scenario, the friction, a possible product, potential value, and what is still unknown. These are stored in `web/idea-stories.json` in EN/中文/FR. They are **editorial illustrations, not actual founder testimony, customer quotations, or validated demand**. The cited source remains accessible below the story. Avoid attributing invented intentions to creators. For new records, write source-grounded stories and mark assumptions explicitly.
