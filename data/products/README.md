@@ -11,3 +11,7 @@ Generate `web/products.json` with `PYTHONPATH=tools/startup_lab python -m startu
 ## Optional human-readable story
 
 A product may include `story.en`, `story.zh`, and `story.fr` with five fields: `who`, `pain`, `solution`, `benefit`, `uncertainty`. The story must not invent a founder's personal motivation or attribute imagined quotations to customers. Frame unproven benefits as possibilities. If a story is missing, the web page states that the origin is not yet known instead of inventing one.
+
+## Collection / timeline classification
+
+Use `collection: "case_study"` for an existing product worth studying. A newly discovered established product is **not** a new launch. Use `collection: "new_launch"` only when `launch_date` is known at day precision (`date_precision: "day"`) and `launch_source_url` points to the source establishing that date. The feed generator rejects unsourced new-launch claims. `observed_at` always means when the radar found the product, not its launch date. The website's New launches tab intentionally stays empty if no date-verified launches exist.
