@@ -1,9 +1,7 @@
 """Stage candidate product research without automatically publishing claims."""
 import argparse
-import csv
 import hashlib
 import json
-import re
 from datetime import date
 from pathlib import Path
 from urllib.parse import urlsplit, urlunsplit, parse_qsl, urlencode
@@ -33,6 +31,7 @@ def stage(root, incoming):
             if not name or len(name)>200:raise ValueError("Product name missing or too long")
             url=canonical_url(item.get("source_url",""))
             observed=item.get("observed_at","")
+            if not isinstance(observed,str):raise ValueError('Invalid observation date')
             date.fromisoformat(observed)
             if url in known:
                 result["duplicates"].append({"index":i,"name":name,"source_url":url});continue
