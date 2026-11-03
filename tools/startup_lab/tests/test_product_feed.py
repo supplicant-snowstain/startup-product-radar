@@ -14,6 +14,13 @@ class ProductFeedTests(unittest.TestCase):
             item=build(d)["products"][0]
             self.assertEqual(item["observed_at"],"2026-11-03")
             self.assertIsNone(item["launch_date"])
+    def test_story_is_preserved(self):
+        with tempfile.TemporaryDirectory() as d:
+            folder=Path(d)/"data"/"products";folder.mkdir(parents=True)
+            story={"en":{"who":"A developer","pain":"Slow feedback","solution":"Faster tests","benefit":"Less waiting","uncertainty":"Who pays?"}}
+            record={"id":"product-demo","name":"Demo","description":"Example","category":"Tools","source_url":"https://example.org","source_type":"vendor","observed_at":"2026-11-03","date_precision":"unknown","verification_status":"provisional","story":story}
+            (folder/"demo.json").write_text(json.dumps(record))
+            self.assertEqual(build(d)["products"][0]["story"],story)
     def test_bad_record_fails(self):
         with tempfile.TemporaryDirectory() as d:
             p=Path(d)/"data"/"products";p.mkdir(parents=True)
