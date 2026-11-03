@@ -44,8 +44,13 @@ jobs:
         env:
           PYTHONPATH: tools/startup_lab
         run: python -m startup_lab.product_feed --root . --output web/products.json
-      - name: Check feed
-        run: python -c "import json; d=json.load(open('web/signals.json')); assert d['count']==len(d['signals']); print('Signals:',d['count'])"
+      - name: Verify static site and published feeds
+        env:
+          PYTHONPATH: tools/startup_lab
+        run: python -m startup_lab.check_site
+      - name: Verify browser JavaScript syntax
+        run: |
+          for file in web/*.js; do node --check "$file"; done
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
