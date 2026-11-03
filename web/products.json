@@ -44,7 +44,9 @@
           "benefit": "La mise en place d'un projet pourrait devenir plus simple.",
           "uncertainty": "Quels usages remplace-t-il réellement selon les équipes ?"
         }
-      }
+      },
+      "collection": "case_study",
+      "launch_source_url": null
     },
     {
       "id": "memos",
@@ -87,7 +89,9 @@
           "benefit": "Noter les idées spontanées pourrait être plus facile.",
           "uncertainty": "La chronologie reste-t-elle pratique après des centaines de notes ?"
         }
-      }
+      },
+      "collection": "case_study",
+      "launch_source_url": null
     },
     {
       "id": "immich",
@@ -130,7 +134,9 @@
           "benefit": "Cela pourrait offrir davantage de contrôle.",
           "uncertainty": "La maintenance et les sauvegardes compensent-elles cet avantage ?"
         }
-      }
+      },
+      "collection": "case_study",
+      "launch_source_url": null
     }
   ],
   "warning": "Observed-at is the research observation date, not necessarily the launch date. Product listing does not prove demand or product-market fit."
