@@ -1,0 +1,42 @@
+{
+  "id": "memos",
+  "name": "Memos",
+  "description": "An open-source self-hosted notebook built around quick thoughts and a personal timeline.",
+  "category": "Productivity",
+  "website": "https://www.usememos.com/",
+  "source_url": "https://github.com/usememos/memos",
+  "source_type": "official_open_source_repository",
+  "observed_at": "2026-11-03",
+  "date_precision": "unknown",
+  "verification_status": "provisional",
+  "problem_ids": [],
+  "differentiator": "Treats quick notes as a personal timeline rather than a heavyweight document workspace.",
+  "limitations": [
+    "The project describes its own positioning; this is not independent user research.",
+    "No validated market-size, payment or retention evidence here.",
+    "This is a cataloged existing product, not a verified new launch."
+  ],
+  "story": {
+    "en": {
+      "who": "Imagine remembering an interesting thought but not wanting to organize a full document.",
+      "pain": "A complex notes workspace can create friction for a tiny idea.",
+      "solution": "Memos makes short entries part of a personal chronological stream.",
+      "benefit": "Capturing fleeting thoughts may feel lightweight.",
+      "uncertainty": "Will a timeline remain usable when notes accumulate?"
+    },
+    "zh": {
+      "who": "想象你突然想到一句值得记下来的话，却不想为了它建一个文档、选目录、整理标签。",
+      "pain": "有时记录一个小想法，工具本身反而太复杂。",
+      "solution": "Memos 把简短笔记放在自己的时间线上，像记录日常动态一样写下来。",
+      "benefit": "捕捉稍纵即逝的想法可能更轻松。",
+      "uncertainty": "时间线变长后，检索和整理是否依然方便？"
+    },
+    "fr": {
+      "who": "Imaginez une idée à noter sans vouloir créer un document entier.",
+      "pain": "Organiser un espace de notes peut être disproportionné pour une phrase.",
+      "solution": "Memos place les petites notes dans une chronologie personnelle.",
+      "benefit": "Noter les idées spontanées pourrait être plus facile.",
+      "uncertainty": "La chronologie reste-t-elle pratique après des centaines de notes ?"
+    }
+  }
+}
