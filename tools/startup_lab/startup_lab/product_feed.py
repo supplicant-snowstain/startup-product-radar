@@ -1,6 +1,8 @@
 """Generate a product discovery feed without inventing products or launch dates."""
 import json
 from pathlib import Path
+from datetime import date
+from urllib.parse import urlsplit
 
 def build(root):
     base=Path(root)/"data"/"products"
@@ -13,10 +15,26 @@ def build(root):
             raise ValueError("Unknown verification state: "+str(path))
         if item["date_precision"] not in ("day","month","unknown"):
             raise ValueError("Unknown date precision: "+str(path))
+        for field in ("source_url","website"):
+            url=item.get(field)
+            if url is not None and (not isinstance(url,str) or urlsplit(url).scheme!="https" or not urlsplit(url).hostname):
+                raise ValueError("Invalid public URL in "+field+": "+str(path))
+        try:
+            date.fromisoformat(item["observed_at"])
+        except (TypeError,ValueError):
+            raise ValueError("Invalid observation date: "+str(path))
         collection=item.get("collection","case_study")
         if collection not in ("case_study","new_launch"):raise ValueError("Invalid collection: "+str(path))
         if collection=="new_launch" and (not item.get("launch_date") or item.get("date_precision")!="day" or not item.get("launch_source_url")):
             raise ValueError("Recent launch requires day-precision launch date and an attributed launch source: "+str(path))
+        if collection=="new_launch":
+            try:
+                date.fromisoformat(item["launch_date"])
+            except (TypeError,ValueError):
+                raise ValueError("Invalid launch date: "+str(path))
+            parsed=urlsplit(item["launch_source_url"])
+            if parsed.scheme!="https" or not parsed.hostname:
+                raise ValueError("Invalid launch source URL: "+str(path))
         products.append({k:item.get(k) for k in ("id","name","description","category","website","source_url","source_type","observed_at","launch_date","date_precision","verification_status","problem_ids","differentiator","limitations","story","collection","launch_source_url")})
     ids=[x["id"] for x in products]
     if len(set(ids))!=len(ids):raise ValueError("Duplicate product IDs")
