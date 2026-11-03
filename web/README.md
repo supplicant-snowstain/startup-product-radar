@@ -55,3 +55,7 @@ After original-source review, a contributor may separately create `data/products
 The website opens **Idea case studies** by default so visitors see the existing three readable product stories rather than an empty New launches tab. Product candidates added by scheduled research remain unpublished pending review. Candidate queue validation runs in both `.github/workflows/candidates.yml` and the Pages build workflow. A failed validation should block the static-site deployment, not turn an unverified candidate into a confirmed launch.
 
 **Verification status:** The GitHub integration has not returned any workflow-run result for the checked commit; this does not verify that Pages or candidate CI has executed successfully. Inspect the latest run in GitHub Actions directly, including any test failures, before claiming automation is operational.
+
+## Build verification
+
+The Pages workflow now runs `python -m startup_lab.check_site` after regenerating the public JSON feeds. It checks that all local JS/CSS assets referenced by the three HTML pages exist, checks JSON parseability and product feed count, and requires the three existing product examples. It also runs `node --check` on every `web/*.js` source. These are **build-time smoke checks**, not a substitute for live browser tests. If a check fails, the Pages deployment step will not run. A green workflow run and a working Pages URL must still be verified independently.
