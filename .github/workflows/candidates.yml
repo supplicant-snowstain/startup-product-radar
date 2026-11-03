@@ -1,0 +1,32 @@
+name: Validate Daily Product Candidates
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'data/product_candidates/**'
+      - 'tools/startup_lab/**'
+      - '.github/workflows/candidates.yml'
+  pull_request:
+    paths:
+      - 'data/product_candidates/**'
+      - 'tools/startup_lab/**'
+      - '.github/workflows/candidates.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Validate staged candidate records
+        env:
+          PYTHONPATH: tools/startup_lab
+        run: python -m startup_lab.validate_candidates --root .
+      - name: Test ingestion and review safeguards
+        env:
+          PYTHONPATH: tools/startup_lab
+        run: python -m unittest discover -s tools/startup_lab/tests -v
