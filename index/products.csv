@@ -1,1 +1,3 @@
 slug,name,website,region,category,first_observed,last_verified,ai_role,funding_signal,evidence_level,status,profile_path
+agentkit-scalekit,AgentKit by Scalekit,https://www.scalekit.com/,unknown,Developer Tools,2026-11-04,2026-11-04,agent_tool_access,unknown,official_claims_plus_product_hunt,provisional,products/agentkit-scalekit.md
+testifly,Testifly,https://testifly.dev/,unknown,Developer Tools,2026-11-04,2026-11-04,ai_testing,unknown,official_claims_plus_product_hunt,provisional,products/testifly.md
