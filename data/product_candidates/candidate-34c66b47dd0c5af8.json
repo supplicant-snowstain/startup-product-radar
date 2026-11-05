@@ -1,0 +1,13 @@
+{
+  "id": "candidate-34c66b47dd0c5af8",
+  "name": "HackerTV",
+  "source_url": "https://hackertv.org/",
+  "observed_at": "2026-11-05",
+  "description": "Community-recommended YouTube videos arranged into shared 24/7 channels, publicly featured on Show HN.",
+  "source_type": "official_product_website",
+  "review_state": "pending",
+  "source_checked": false,
+  "launch_date": null,
+  "launch_date_verified": false,
+  "notes": "Candidate only. Do not automatically publish as new launch or confirmed user demand."
+}
