@@ -1,3 +1,7 @@
 slug,name,website,region,category,first_observed,last_verified,ai_role,funding_signal,evidence_level,status,profile_path
 agentkit-scalekit,AgentKit by Scalekit,https://www.scalekit.com/,unknown,Developer Tools,2026-11-04,2026-11-04,agent_tool_access,unknown,official_claims_plus_product_hunt,provisional,products/agentkit-scalekit.md
 testifly,Testifly,https://testifly.dev/,unknown,Developer Tools,2026-11-04,2026-11-04,ai_testing,unknown,official_claims_plus_product_hunt,provisional,products/testifly.md
+chromagraph-camera,Chromagraph Camera,https://apps.apple.com/us/app/chromagraph-camera/id6803329435,US,Photography,2026-11-05,2026-11-05,none,unknown,app_store_reviews_and_version_history,provisional,products/chromagraph-camera.md
+tiny-computers,Tiny Computers,https://apps.apple.com/de/app/tiny-computers/id6816896250,UK,Interactive Entertainment,2026-11-05,2026-11-05,none,unknown,app_store_listing_and_one_review,provisional,products/tiny-computers.md
+hackertv,HackerTV,https://hackertv.org/,unknown,Media Discovery,2026-11-05,2026-11-05,none_confirmed,unknown,show_hn_listing,provisional,products/hackertv.md
+synkr,Synkr,https://www.synkr.nl/,Netherlands,Freelance Productivity,2026-11-05,2026-11-05,none_confirmed,unknown,official_website,provisional,products/synkr.md
