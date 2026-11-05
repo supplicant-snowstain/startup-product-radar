@@ -1,0 +1,13 @@
+{
+  "id": "candidate-4c92a287af0e946b",
+  "name": "Chromagraph Camera",
+  "source_url": "https://apps.apple.com/us/app/chromagraph-camera/id6803329435",
+  "observed_at": "2026-11-05",
+  "description": "An iOS camera app offering a distinctive RAW-based cinematic color workflow; October 20 version 1.0, November iteration evidence.",
+  "source_type": "official_app_store_listing",
+  "review_state": "pending",
+  "source_checked": false,
+  "launch_date": null,
+  "launch_date_verified": false,
+  "notes": "Candidate only. Do not automatically publish as new launch or confirmed user demand."
+}
