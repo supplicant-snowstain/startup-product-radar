@@ -8,6 +8,8 @@ on:
       - 'index/products.csv'
       - 'data/research_intelligence.json'
       - 'data/relationships.json'
+      - 'data/opportunity.json'
+      - 'tools/build_opportunity_feed.py'
       - 'data/social_profiles.json'
       - 'tools/build_social_feed.py'
       - 'tools/validate_relationships.py'
@@ -53,6 +55,8 @@ jobs:
         run: python tools/build_research_feed.py --root . --output web/research.json
       - name: Validate and publish approved relationship evidence
         run: python tools/validate_relationships.py --relations data/relationships.json --research web/research.json --output web/relationships.json
+      - name: Publish reviewed opportunity intelligence
+        run: python tools/build_opportunity_feed.py --registry data/opportunity.json --research web/research.json --output web/opportunity.json
       - name: Publish verified official social profiles
         run: python tools/build_social_feed.py --registry data/social_profiles.json --products index/products.csv --output web/social-profiles.json
       - name: Test relationship evidence gate
