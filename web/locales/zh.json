@@ -64,7 +64,9 @@
     "productsExplain": "先从具体产品入手：看它帮助谁、解决什么麻烦，再打开详情了解背后的创意。",
     "signalsExplain": "这里不是产品排行榜，而是尚待验证的用户问题。每张卡片都能继续追溯来源和待回答的问题。",
     "researchKicker": "03 / 研究与证据",
-    "researchExplain": "按观察日期整理研究报告。点击报告中的产品查看问题假设，也可以阅读原始报告核对证据。"
+    "researchExplain": "按观察日期整理研究报告。点击报告中的产品查看问题假设，也可以阅读原始报告核对证据。",
+    "signalCardHint": "这是一个待验证的用户问题",
+    "signalCardAction": "查看来源与待验证问题 →"
   },
   "signals": {
     "signal-ci-test-selection": {
