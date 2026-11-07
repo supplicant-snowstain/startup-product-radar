@@ -64,7 +64,9 @@
     "productsExplain": "Partez d'un produit concret : à qui sert-il, quel problème vise-t-il et quelle idée le motive ?",
     "signalsExplain": "Ce ne sont pas des classements. Chaque carte présente un problème à vérifier, ses sources et les questions ouvertes.",
     "researchKicker": "03 / RECHERCHE ET PREUVES",
-    "researchExplain": "Les rapports sont classés par date d'observation. Ouvrez un produit pour comprendre l'hypothèse, ou consultez le rapport source."
+    "researchExplain": "Les rapports sont classés par date d'observation. Ouvrez un produit pour comprendre l'hypothèse, ou consultez le rapport source.",
+    "signalCardHint": "Un problème possible, pas un produit",
+    "signalCardAction": "Voir la source et les questions ouvertes →"
   },
   "signals": {
     "signal-ci-test-selection": {
