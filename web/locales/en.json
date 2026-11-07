@@ -64,7 +64,9 @@
     "productsExplain": "Start with a concrete product: who might it help, what problem does it address, and what is the idea behind it?",
     "signalsExplain": "These are not product rankings. Each card is an unverified user problem with sources and questions worth investigating.",
     "researchKicker": "03 / RESEARCH & EVIDENCE",
-    "researchExplain": "Reports are grouped by observation date. Open a product to inspect the user-job hypothesis, or read the original report to verify sources."
+    "researchExplain": "Reports are grouped by observation date. Open a product to inspect the user-job hypothesis, or read the original report to verify sources.",
+    "signalCardHint": "A possible user problem, not a product",
+    "signalCardAction": "Inspect source and open questions →"
   },
   "signals": {}
 }
