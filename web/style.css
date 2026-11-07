@@ -52,3 +52,11 @@
 .research-product a{font-size:12px}
 .research-evidence{font-size:11px!important;border-top:1px solid var(--line);padding-top:12px}
 @media(max-width:700px){.research-toolbar{flex-direction:column;align-items:stretch}.research-toolbar input{min-width:0;width:100%}}
+
+
+/* Research detail source links and explicit evidence status. */
+.research-product-title{font-weight:700;font-size:15px;color:var(--ink)!important;text-decoration:underline;text-underline-offset:3px}
+#research-detail .research-section h3{font-size:17px;margin-top:25px}
+#research-detail .research-section p,#research-detail .research-aside p{line-height:1.75}
+#research-detail .related-list a{overflow-wrap:anywhere}
+#research-error:not([hidden]){margin:30px 0;padding:24px;border:1px solid var(--line);background:#fafaf5}
