@@ -7,18 +7,18 @@
 
 **Latest: 2026-11-07 (Europe/Paris)** · [中文深度报告](reports/2026/11/2026-11-07.md) · [All reports / 全部日报](reports/README.md)
 
-> **本期观察：** AI Agent 的执行环境正在延伸到真实移动设备、多操作系统和持久工作区。公开反馈揭示摄像头支持、人工接管和成本预测等限制；**尚无独立留存或 PMF 证据**。
+> **研究提醒：** 本栏目按报告观察日期排列，**不代表产品首次发布日期**。产品榜单、创始人主张和融资不等于留存或 PMF；请阅读报告中的原始证据与反面证据。
 
-| Date (Paris) | Featured research | Full report |
+| Date (Paris) | Featured research (observed products) | Full report |
 | --- | --- | --- |
-| 2026-11-07 | Glasshand · Maritime — 真实设备与执行环境 | [Read](reports/2026/11/2026-11-07.md) |
-| 2026-11-06 | Pushary · Okapi · Tao Browser — 审批、API 变更与账户隔离 | [Read](reports/2026/11/2026-11-06.md) |
-| 2026-11-05 | Chromagraph · Tiny Computers · HackerTV — 非 AI 体验与用户反馈 | [Read](reports/2026/11/2026-11-05.md) |
-| 2026-11-04 | AgentKit · Testifly — Agent 权限与自动化测试 | [Read](reports/2026/11/2026-11-04.md) |
+| 2026-11-07 | Glasshand · Maritime | [Read](reports/2026/11/2026-11-07.md) |
+| 2026-11-06 | Pushary for Teams · Okapi · Tao Browser · Pinku · … | [Read](reports/2026/11/2026-11-06.md) |
+| 2026-11-05 | Chromagraph Camera · Tiny Computers · HackerTV · Synkr | [Read](reports/2026/11/2026-11-05.md) |
+| 2026-11-04 | AgentKit by Scalekit · Testifly | [Read](reports/2026/11/2026-11-04.md) |
 
 **Browse:** [Product profiles / 产品档案](products/) · [Insights / 需求洞察](insights/) · [Structured index / 产品索引](index/products.csv) · [Methodology / 研究方法](METHODOLOGY.md)
 
-*This section lists **research observation dates, not product launch dates**. Reports distinguish observed facts, founder claims and hypotheses. Website product candidates remain pending until reviewed.*
+*Reports are public research; staged product candidates are **not** automatically published as verified launches.*
 
 <!-- DAILY_RADAR_END -->
 
