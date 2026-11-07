@@ -53,7 +53,7 @@
         const list=document.createElement("div");list.className="research-product-list";
         for(const p of matches){
           const item=document.createElement("div");item.className="research-product";
-          const name=document.createElement("strong");name.textContent=p.name;
+          const name=document.createElement("a");name.href="./research.html?id="+encodeURIComponent(p.slug);name.className="research-product-title";name.textContent=p.name;
           const category=document.createElement("small");category.textContent=p.category+" · "+(classification(p)==="nonai"?c.nonai:classification(p)==="ai"?c.ai:c.unknown);
           const job=document.createElement("p");job.textContent=c.problem+": "+(jobs[p.category]?.[l]||c.unknown);
           item.append(name,category,job);
