@@ -59,7 +59,7 @@
           const intel=p.intelligence;
           if(intel?.workflow?.[l]){const approach=document.createElement("p");approach.className="research-explainer";const strong=document.createElement("strong");strong.textContent=c.approach+" ";approach.append(strong,document.createTextNode(intel.workflow[l]));item.append(approach)}
           if(intel?.alternatives?.[l]){const alternative=document.createElement("p");alternative.className="research-explainer research-alternatives";const strong=document.createElement("strong");strong.textContent=c.alternative+" ";alternative.append(strong,document.createTextNode(intel.alternatives[l]));item.append(alternative)}
-          const action=document.createElement("span");action.className="research-item-action";action.textContent=l==="zh"?"看懂产品与研究证据 →":l==="fr"?"Comprendre le produit et les preuves →":"Understand product and evidence →";item.prepend(name,category,job);item.append(action);
+          const action=document.createElement("a");action.href="./research.html?id="+encodeURIComponent(p.slug);action.className="research-item-action";action.textContent=l==="zh"?"看懂产品与研究证据 →":l==="fr"?"Comprendre le produit et les preuves →":"Understand product and evidence →";item.prepend(name,category,job);item.append(action);
           if(p.profile_url){const link=document.createElement("a");link.href=p.profile_url;link.target="_blank";link.rel="noopener noreferrer";link.textContent=c.profile+" ↗";item.append(link)}
           list.append(item);
         }
