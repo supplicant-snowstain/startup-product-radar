@@ -72,3 +72,6 @@
 
 /* Explain every filter and make empty categories unavailable. */
 .filter-explanation{font-size:13px;line-height:1.65;color:#4d6753;background:#e8eee2;border-left:3px solid #8fbb72;padding:11px 15px;margin:15px 0 18px}.product-tabs button,.research-filters button,.toolbar button{transition:background .15s,color .15s}.product-tabs button:hover,.toolbar button:hover{border-color:#58825d}.product-tabs button.active,.toolbar button.selected{background:#1d2b25;color:white}.product-tabs{margin-bottom:0}
+
+/* Search by user problem rather than internal editorial classifications. */
+.product-search{display:block;width:min(100%,720px);margin:25px 0 12px;padding:15px 18px;border:1px solid #b9c8b7;border-radius:10px;background:#fbfcf7;color:var(--ink);font:15px 'DM Sans',sans-serif}.product-search:focus-visible{outline:2px solid #4a8858;outline-offset:2px}.product-difference{border-top:1px solid #dce6d7;padding-top:12px!important;margin-top:10px!important;color:#365640!important}.product-difference strong{display:block;margin-bottom:5px;font-size:12px;color:#285f3d}.product-card .card-eyebrow{font-weight:700}.product-tabs{margin-top:8px}.product-card>small{margin-top:6px}.product-card a:first-of-type{font-weight:700}
