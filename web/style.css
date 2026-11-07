@@ -34,3 +34,21 @@
 .research-card a{margin-top:auto;font-size:13px;color:#286f50;text-decoration:underline}
 #research-status{color:var(--muted);font-size:13px}
 @media(max-width:700px){.research-feed-grid{grid-template-columns:1fr}.research-card{min-height:160px}}
+
+
+/* Searchable research explorer; every user-job description is explicitly a hypothesis. */
+.research-toolbar{display:flex;justify-content:space-between;gap:14px;align-items:center;margin-top:26px;padding:15px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.research-toolbar input{font:14px 'DM Sans',sans-serif;padding:12px 14px;border:1px solid var(--line);background:#fafaf5;border-radius:8px;min-width:260px;flex:1}
+.research-filters{display:flex;gap:6px;flex-wrap:wrap}
+.research-filters button{font:600 12px 'DM Sans',sans-serif;border:1px solid var(--line);border-radius:22px;padding:10px 14px;background:transparent;color:var(--ink);cursor:pointer}
+.research-filters button.selected{background:var(--ink);color:white}
+.research-filters button:focus-visible,.research-toolbar input:focus-visible{outline:2px solid #438b57;outline-offset:2px}
+.research-count{font:11px 'DM Mono',monospace;color:var(--muted)}
+.research-product-list{display:grid;gap:10px}
+.research-product{padding:13px;border:1px solid #e0e5da;border-radius:8px;background:#f2f5ed;display:grid;gap:6px}
+.research-product strong{font-size:15px}
+.research-product small{font-size:10px;color:#526f56}
+.research-product p{font-size:12px;line-height:1.55}
+.research-product a{font-size:12px}
+.research-evidence{font-size:11px!important;border-top:1px solid var(--line);padding-top:12px}
+@media(max-width:700px){.research-toolbar{flex-direction:column;align-items:stretch}.research-toolbar input{min-width:0;width:100%}}
