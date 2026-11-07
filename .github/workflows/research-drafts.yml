@@ -1,0 +1,39 @@
+name: Prepare research intelligence review drafts
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'reports/**'
+      - 'index/products.csv'
+      - 'data/research_intelligence.json'
+      - 'tools/build_research_drafts.py'
+      - 'tools/test_research_drafts.py'
+      - '.github/workflows/research-drafts.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: research-drafts
+  cancel-in-progress: true
+
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Test review-only extraction
+        run: python tools/test_research_drafts.py
+      - name: Generate review drafts
+        run: python tools/build_research_drafts.py --root . --output data/research_drafts.json
+      - name: Upload drafts for human review (not deployed)
+        uses: actions/upload-artifact@v4
+        with:
+          name: research-intelligence-review-drafts
+          path: data/research_drafts.json
+          retention-days: 30
