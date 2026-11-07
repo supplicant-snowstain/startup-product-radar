@@ -6,6 +6,7 @@ on:
       - 'web/**'
       - 'reports/**'
       - 'index/products.csv'
+      - 'data/research_intelligence.json'
       - 'tools/build_research_feed.py'
       - 'tools/test_research_feed.py'
       - 'data/provisional/**'
