@@ -55,7 +55,7 @@
           const item=document.createElement("div");item.className="research-product";
           const name=document.createElement("a");name.href="./research.html?id="+encodeURIComponent(p.slug);name.className="research-product-title";name.textContent=p.name;
           const category=document.createElement("small");category.textContent=p.category+" · "+(classification(p)==="nonai"?c.nonai:classification(p)==="ai"?c.ai:c.unknown);
-          const job=document.createElement("p");job.textContent=c.problem+": "+(jobs[p.category]?.[l]||c.unknown);
+          const job=document.createElement("p");job.textContent=c.problem+": "+(p.intelligence?.job?.[l]||jobs[p.category]?.[l]||c.unknown);
           item.append(name,category,job);
           if(p.profile_url){const link=document.createElement("a");link.href=p.profile_url;link.target="_blank";link.rel="noopener noreferrer";link.textContent=c.profile+" ↗";item.append(link)}
           list.append(item);
