@@ -33,6 +33,13 @@ def check(root=ROOT):
                     errors.append(slug+"."+field+"."+lang+": missing or invalid")
         if not isinstance(entry.get("source_status"),str) or not entry["source_status"].strip():
             errors.append(slug+": missing source status")
+        if "source_links" in entry:
+            from urllib.parse import urlparse
+            links=entry["source_links"]
+            if not isinstance(links,list) or not links or any(not isinstance(link,str) or urlparse(link).scheme!="https" or not urlparse(link).hostname for link in links):
+                errors.append(slug+": invalid source links")
+        if "evidence_level" in entry and entry["evidence_level"] not in ("public_claims","observed_public_feedback","independent_user_evidence"):
+            errors.append(slug+": invalid evidence level")
         if entry.get("source_status") in ("verified_demand","proven_pmf","approved"):
             errors.append(slug+": unsupported evidence certification")
     return errors
