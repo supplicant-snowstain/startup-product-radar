@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "editorial_policy": "Every entry is a research synthesis, not independent product validation. Do not infer retention, PMF or revenue.",
+  "products": {
+    "glasshand": {
+      "job": {
+        "zh": "没有自有设备时，开发者如何让 Agent 在真实 iPhone 或 Mac 上完成原生界面操作与测试？",
+        "en": "How can developers test native agent interactions on real iPhones or Macs without owning those devices?",
+        "fr": "Comment tester des agents sur de vrais iPhone ou Mac sans posséder ces appareils ?"
+      },
+      "workflow": {
+        "zh": "提供专属真实设备租用和供外部 Agent 使用的接口；实际能力需以官方文档验证。",
+        "en": "Dedicated real-device rentals with interfaces for external agents; capabilities require documentation checks.",
+        "fr": "Location d'appareils réels dédiés avec interfaces pour agents externes, à vérifier."
+      },
+      "alternatives": {
+        "zh": "本地真机、模拟器、第三方设备农场。",
+        "en": "Local physical devices, simulators and device farms.",
+        "fr": "Appareils locaux, simulateurs et fermes d'appareils."
+      },
+      "evidence": {
+        "zh": "公开产品资料描述设备租用；公开问答涉及扫码、密码与设备型号。创始人融资说法尚未独立核实。",
+        "en": "Public product material describes device rental; public questions address QR scanning, passwords and device models. Founder funding claims remain unverified.",
+        "fr": "Documentation publique sur la location et questions concernant QR, mots de passe et modèles. Financement non vérifié."
+      },
+      "counterevidence": {
+        "zh": "公开讨论表明上线时不支持 QR 摄像头测试，设备类型有限。",
+        "en": "Public discussion indicates QR-camera testing was unsupported at launch and device variety was limited.",
+        "fr": "Les échanges publics indiquent l'absence de test QR par caméra au lancement et peu de modèles."
+      },
+      "experiment": {
+        "zh": "选择五项涉及原生设备能力的任务，对比真机租用、本地真机和模拟器的成功率、准备时间及总成本。",
+        "en": "Compare five native-device tasks across rental, local hardware and simulators on success rate, setup time and total cost.",
+        "fr": "Comparer cinq tâches natives sur appareils loués, locaux et simulateurs : réussite, temps et coût."
+      },
+      "source_status": "public_listing_and_founder_claims"
+    },
+    "maritime": {
+      "job": {
+        "zh": "如何减少为不同 Agent 任务准备 Windows、Linux 与 Android 执行环境的工程成本？",
+        "en": "How can teams reduce setup work for Windows, Linux and Android agent environments?",
+        "fr": "Comment réduire la préparation des environnements Windows, Linux et Android pour agents ?"
+      },
+      "workflow": {
+        "zh": "通过 API 创建沙箱、持久桌面与多系统执行环境；Android 应用安装能力存在限制。",
+        "en": "API-provisioned sandboxes and persistent desktops across systems; Android app installation has limitations.",
+        "fr": "Bacs à sable et bureaux persistants par API ; limites pour les applications Android."
+      },
+      "alternatives": {
+        "zh": "自建虚拟机、云桌面、容器平台与单系统沙箱。",
+        "en": "Self-managed VMs, cloud desktops, container platforms and single-OS sandboxes.",
+        "fr": "VM internes, bureaux cloud, conteneurs et bacs à sable mono-OS."
+      },
+      "evidence": {
+        "zh": "公开产品介绍和创始人答复描述多系统环境及小时计费；价格属于公开主张，非独立账单验证。",
+        "en": "Public listings and maker answers describe multiple environments and hourly pricing; amounts are claims, not independently billed measurements.",
+        "fr": "Pages et réponses publiques sur environnements et tarifs horaires ; tarifs non audités."
+      },
+      "counterevidence": {
+        "zh": "创始人答复指出虚拟 Android 缺少预装应用；人工接管状态和空闲计费仍是公开疑问。",
+        "en": "Maker answers note virtual Android lacks installed apps; takeover state and idle billing remain open questions.",
+        "fr": "Android virtuel sans applications installées ; reprise manuelle et facturation inactive restent à clarifier."
+      },
+      "experiment": {
+        "zh": "邀请十位开发者完成多系统 Agent 环境部署，预注册目标：至少四人设置时间减少超过 30%。",
+        "en": "Test ten developers deploying multi-OS agent environments; preregister whether at least four reduce setup time by over 30%.",
+        "fr": "Tester dix développeurs ; vérifier si au moins quatre réduisent le temps de préparation de plus de 30 %."
+      },
+      "source_status": "public_listing_and_maker_answers"
+    },
+    "tao-browser": {
+      "job": {
+        "zh": "同时服务多家公司的人如何避免浏览器账户、Cookie 与工作空间混用？",
+        "en": "How can multi-company workers prevent browser accounts, cookies and workspaces from mixing?",
+        "fr": "Comment éviter de mélanger comptes, cookies et espaces de plusieurs entreprises ?"
+      },
+      "workflow": {
+        "zh": "公开描述为 Apple 平台测试版，提供公司隔离的浏览器空间和 Cookie。",
+        "en": "Public beta for Apple platforms describes company-isolated browser spaces and cookies.",
+        "fr": "Bêta Apple avec espaces et cookies isolés par entreprise."
+      },
+      "alternatives": {
+        "zh": "Chrome/Safari 用户配置文件、Arc Spaces。",
+        "en": "Chrome/Safari profiles and Arc Spaces.",
+        "fr": "Profils Chrome/Safari et Arc Spaces."
+      },
+      "evidence": {
+        "zh": "Product Hunt 产品页及创始人对跨公司工作的描述；缺少独立用户使用数据。",
+        "en": "Product Hunt listing and founder account of multi-company work; independent usage data is absent.",
+        "fr": "Page Product Hunt et témoignage du fondateur ; données d'usage indépendantes absentes."
+      },
+      "counterevidence": {
+        "zh": "主流浏览器已提供部分隔离能力，差异化价值尚需验证。",
+        "en": "Mainstream browsers already provide some isolation; incremental value remains unproven.",
+        "fr": "Les navigateurs courants offrent déjà une certaine isolation ; avantage non prouvé."
+      },
+      "experiment": {
+        "zh": "观察五位多客户工作者切换账户的错误率和耗时，并与浏览器原生 Profiles 对照。",
+        "en": "Observe five multi-client workers switching accounts; compare errors and time against native browser profiles.",
+        "fr": "Observer cinq utilisateurs multi-clients et comparer erreurs et temps aux profils natifs."
+      },
+      "source_status": "public_listing_and_founder_claims"
+    }
+  }
+}
