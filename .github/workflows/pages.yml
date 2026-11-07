@@ -7,6 +7,9 @@ on:
       - 'reports/**'
       - 'index/products.csv'
       - 'data/research_intelligence.json'
+      - 'data/relationships.json'
+      - 'tools/validate_relationships.py'
+      - 'tools/test_relationships.py'
       - 'tools/build_research_feed.py'
       - 'tools/test_research_feed.py'
       - 'tools/validate_research_intelligence.py'
@@ -44,6 +47,10 @@ jobs:
         run: python -m startup_lab.product_feed --root . --output web/products.json
       - name: Generate research observations feed (not a launch feed)
         run: python tools/build_research_feed.py --root . --output web/research.json
+      - name: Validate and publish approved relationship evidence
+        run: python tools/validate_relationships.py --relations data/relationships.json --research web/research.json --output web/relationships.json
+      - name: Test relationship evidence gate
+        run: python tools/test_relationships.py
       - name: Test research feed isolation
         run: python tools/test_research_feed.py
       - name: Validate curated research intelligence
