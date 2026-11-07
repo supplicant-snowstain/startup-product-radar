@@ -2,6 +2,26 @@
 
 **中文 · [English](#english) · [Français](#français)**
 
+<!-- DAILY_RADAR_START -->
+## 🛰️ Latest research / 最新研究 / Dernières recherches
+
+**Latest: 2026-11-07 (Europe/Paris)** · [中文深度报告](reports/2026/11/2026-11-07.md) · [All reports / 全部日报](reports/README.md)
+
+> **本期观察：** AI Agent 的执行环境正在延伸到真实移动设备、多操作系统和持久工作区。公开反馈揭示摄像头支持、人工接管和成本预测等限制；**尚无独立留存或 PMF 证据**。
+
+| Date (Paris) | Featured research | Full report |
+| --- | --- | --- |
+| 2026-11-07 | Glasshand · Maritime — 真实设备与执行环境 | [Read](reports/2026/11/2026-11-07.md) |
+| 2026-11-06 | Pushary · Okapi · Tao Browser — 审批、API 变更与账户隔离 | [Read](reports/2026/11/2026-11-06.md) |
+| 2026-11-05 | Chromagraph · Tiny Computers · HackerTV — 非 AI 体验与用户反馈 | [Read](reports/2026/11/2026-11-05.md) |
+| 2026-11-04 | AgentKit · Testifly — Agent 权限与自动化测试 | [Read](reports/2026/11/2026-11-04.md) |
+
+**Browse:** [Product profiles / 产品档案](products/) · [Insights / 需求洞察](insights/) · [Structured index / 产品索引](index/products.csv) · [Methodology / 研究方法](METHODOLOGY.md)
+
+*This section lists **research observation dates, not product launch dates**. Reports distinguish observed facts, founder claims and hypotheses. Website product candidates remain pending until reviewed.*
+
+<!-- DAILY_RADAR_END -->
+
 **[🌐 Open interactive demo / 打开交互演示 / Ouvrir la démo](https://supplicant-snowstain.github.io/startup-product-radar/)**
 
 > **Deployment status / 部署状态 / État du déploiement:** Website URL is the configured GitHub Pages destination; successful publication has **not yet been independently confirmed**. Check [Actions / 部署记录 / Exécutions](https://github.com/supplicant-snowstain/startup-product-radar/actions/workflows/pages.yml). If unavailable, see local instructions below.
