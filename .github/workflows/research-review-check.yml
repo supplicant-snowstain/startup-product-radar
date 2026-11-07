@@ -8,6 +8,7 @@ on:
       - 'tools/test_prepare_research_review.py'
       - 'tools/build_research_feed.py'
       - 'tools/test_research_feed.py'
+      - 'tools/validate_research_intelligence.py'
       - '.github/workflows/research-review-check.yml'
   push:
     branches: [main]
