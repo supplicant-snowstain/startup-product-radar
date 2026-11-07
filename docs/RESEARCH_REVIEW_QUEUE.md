@@ -21,3 +21,22 @@ On report or index changes, the **Prepare research intelligence review drafts** 
 ## Français
 
 À chaque modification des rapports ou de l'index, le workflow **Prepare research intelligence review drafts** produit un artefact JSON téléchargeable pendant 30 jours. Il ne publie aucun produit. Vérifier chaque extrait auprès des sources, distinguer observations, déclarations et hypothèses, documenter les contre-preuves et les expériences réfutables, puis traduire en chinois, anglais et français avant fusion manuelle dans `data/research_intelligence.json`. Les données inconnues restent inconnues.
+
+## Review export → Pull Request / 审核文件提交 PR / Export vers PR
+
+1. 在 `review.html` 完成所有语言字段并下载 `<slug>-reviewed.json`。此文件仍标记为 `requires_maintainer_approval`，不是已验证事实。
+2. 在本地仓库中运行：
+
+   ```bash
+   python tools/prepare_research_review.py --root . --review path/to/<slug>-reviewed.json --output /tmp/research_intelligence_candidate.json
+   ```
+
+   工具会检查产品是否在索引中、原始日报是否存在、三语字段是否齐全、是否存在重复条目，并拒绝直接覆盖正式知识库。
+3. 人工比较生成的候选 JSON 与 `data/research_intelligence.json`，核对证据后在单独分支将经过审核的新条目合并进该文件，提交 Pull Request。**不要把整个候选 JSON 直接覆盖可能已被其他贡献者更新的正式文件。**
+4. `Validate research intelligence review` 将在 PR 上运行校验；维护者审查原始证据后再合并。GitHub Pages 只在合并到 main 后发布。
+
+**Limitations:** 当前尚不支持从静态网站直接创建 PR；不要求用户提供 GitHub token 给网页。CI 只检查结构与来源文件关联，不能自动证明引用真实性、译文准确性、商业指标或产品市场匹配。
+
+**English:** Export a reviewed item, run the validation/preparation CLI, inspect the diff and submit a PR on a separate branch. CI checks structure, not factual truth. No browser token or automatic merge.
+
+**Français :** Exporter la fiche, exécuter le validateur, contrôler les différences et soumettre une PR depuis une branche dédiée. Les tests vérifient la structure, pas la véracité des affirmations.
