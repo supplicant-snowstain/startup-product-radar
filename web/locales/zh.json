@@ -1,15 +1,15 @@
 {
   "ui": {
-    "navExplore": "探索线索",
+    "navExplore": "探索产品",
     "navMethod": "研究方法",
     "heroKicker": "● 为好奇的独立开发者而建",
     "hero": "不要从<i>点子</i>开始。<br>从一个<mark>问题</mark>开始。",
     "heroDesc": "发现真实摩擦，追溯原始证据，理解人们想完成的事情，以及现有工具尚未解决的难题。",
-    "heroAction": "探索需求信号 ↗",
+    "heroAction": "从产品开始探索 ↗",
     "heroFine": "观察线索 ≠ 已验证市场需求 · 开源项目",
-    "boardKicker": "01 / 需求信号板",
-    "boardTitle": "从真实问题中发现方向。",
-    "boardDesc": "附带原始来源的早期研究线索，并非已经验证的创业机会。",
+    "boardKicker": "02 / 用户问题线索",
+    "boardTitle": "人们到底遇到了什么问题？",
+    "boardDesc": "公开资料里的早期问题线索，不等于已经验证的创业机会。",
     "search": "搜索需求，例如 CI",
     "all": "全部",
     "dev": "开发者工具",
@@ -50,7 +50,21 @@
     "loadFailed": "无法加载研究数据",
     "originalText": "研究摘要提供译文，原始链接保留来源语言。",
     "devDomain": "开发者工具",
-    "aiDomain": "AI 开发工具"
+    "aiDomain": "AI 开发工具",
+    "journeyKicker": "从这里开始 / 探索指南",
+    "journeyTitle": "看懂一个产品，再判断它值不值得探索。",
+    "journeyDesc": "产品案例、用户问题和研究报告是三种不同的信息。我们把它们串成一条容易理解的探索路径。",
+    "journeyProducts": "先看产品",
+    "journeyProductsDesc": "它做什么？为什么有人想做它？",
+    "journeySignals": "再看问题",
+    "journeySignalsDesc": "用户遇到的麻烦，是否还有更好的解法？",
+    "journeyResearch": "最后看证据",
+    "journeyResearchDesc": "这些说法来自哪里？哪些还没得到验证？",
+    "productsKicker": "01 / 从产品理解创意",
+    "productsExplain": "先从具体产品入手：看它帮助谁、解决什么麻烦，再打开详情了解背后的创意。",
+    "signalsExplain": "这里不是产品排行榜，而是尚待验证的用户问题。每张卡片都能继续追溯来源和待回答的问题。",
+    "researchKicker": "03 / 研究与证据",
+    "researchExplain": "按观察日期整理研究报告。点击报告中的产品查看问题假设，也可以阅读原始报告核对证据。"
   },
   "signals": {
     "signal-ci-test-selection": {
