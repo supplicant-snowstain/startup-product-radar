@@ -4,7 +4,7 @@
 
 新的日报或产品索引提交到 `main` 后，GitHub Actions 的 **Prepare research intelligence review drafts** 会生成可下载的 `research-intelligence-review-drafts` 构建产物（JSON），保留 30 天。它**不是**网站公开数据，不会修改 `data/research_intelligence.json`，也不会将待审核产品升级为正式新品。
 
-审核流程：
+可视化审核工作台：<https://supplicant-snowstain.github.io/startup-product-radar/review.html>。在浏览器中导入 Actions 下载的 JSON，逐产品编辑中英法字段，检查完整性并导出单产品审核文件。所有编辑仅在当前浏览器页面内，刷新会丢失；不上传到服务器。导出内容仍须人工核查并合并进正式知识库。\n\n审核流程：
 
 1. 在 [Actions](https://github.com/supplicant-snowstain/startup-product-radar/actions/workflows/research-drafts.yml) 下载最新 JSON；也可以手动运行 `python tools/build_research_drafts.py --root . --output data/research_drafts.json`。
 2. 对照 `source_report` 及其中的原始链接逐条核实 `extracted_zh`。自动抽取是启发式的，可能漏掉或错误匹配字段。不得把创始人自述写成独立验证。
