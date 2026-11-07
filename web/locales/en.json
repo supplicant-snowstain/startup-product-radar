@@ -1,15 +1,15 @@
 {
   "ui": {
-    "navExplore": "Explore signals",
+    "navExplore": "Explore products",
     "navMethod": "Method",
     "heroKicker": "● A FIELD GUIDE FOR CURIOUS BUILDERS",
     "hero": "Don't start with an <i>idea.</i><br>Start with a <mark>problem.</mark>",
     "heroDesc": "Follow the friction. Trace the evidence. Discover what people are trying to get done — and where existing tools fall short.",
-    "heroAction": "Explore the signals ↗",
+    "heroAction": "Start with products ↗",
     "heroFine": "OBSERVATIONS ≠ VALIDATED DEMAND · OPEN SOURCE",
-    "boardKicker": "01 / THE SIGNAL BOARD",
-    "boardTitle": "Where the friction lives.",
-    "boardDesc": "Early research leads with original sources. Not validated opportunities.",
+    "boardKicker": "02 / PROBLEM SIGNALS",
+    "boardTitle": "What problems are people running into?",
+    "boardDesc": "Early public clues, not validated startup opportunities.",
     "search": "Search problems, e.g. CI",
     "all": "All",
     "dev": "Developer tools",
@@ -50,7 +50,21 @@
     "loadFailed": "Unable to load research data",
     "originalText": "Research summaries are translations. The linked source remains in its original language.",
     "devDomain": "Developer Tools",
-    "aiDomain": "AI Developer Tools"
+    "aiDomain": "AI Developer Tools",
+    "journeyKicker": "START HERE / EXPLORATION GUIDE",
+    "journeyTitle": "Understand a product before deciding what is worth exploring.",
+    "journeyDesc": "Product stories, user problems and research reports serve different purposes. Follow them as a simple discovery journey.",
+    "journeyProducts": "Start with a product",
+    "journeyProductsDesc": "What does it do, and why was it made?",
+    "journeySignals": "Find the problem",
+    "journeySignalsDesc": "What friction remains, and could there be a better solution?",
+    "journeyResearch": "Inspect the evidence",
+    "journeyResearchDesc": "Where do claims come from, and what is still unknown?",
+    "productsKicker": "01 / PRODUCT STORIES",
+    "productsExplain": "Start with a concrete product: who might it help, what problem does it address, and what is the idea behind it?",
+    "signalsExplain": "These are not product rankings. Each card is an unverified user problem with sources and questions worth investigating.",
+    "researchKicker": "03 / RESEARCH & EVIDENCE",
+    "researchExplain": "Reports are grouped by observation date. Open a product to inspect the user-job hypothesis, or read the original report to verify sources."
   },
   "signals": {}
 }
