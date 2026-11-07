@@ -39,6 +39,8 @@ Startup Product Radar 是面向独立开发者的开源创业机会探索工具�
 
 **[进入交互网页](https://supplicant-snowstain.github.io/startup-product-radar/)** · [查看网页源码](web/) · [研究方法](METHODOLOGY.md) · [路线图](docs/CURRENT_FOCUS.md)
 
+**每日研究展示：** 交互网站已加入独立的 Daily Research 区域；Pages 构建时从 `reports/` 和 `index/products.csv` 生成 `web/research.json`，展示最近研究报告与观察产品，**不将待审核候选视为正式新品**。是否已部署成功仍需检查 [GitHub Actions](https://github.com/supplicant-snowstain/startup-product-radar/actions/workflows/pages.yml)。
+
 **新增 Product Discovery：** 网站已加入新产品区域与产品数据接口，但目前已收录 3 个有官方开源来源的产品案例（uv、Immich、Memos），但它们不是今日新品；网页现已将「有日期证据的新品」和「产品创意案例」分开显示。每日研究任务的结果还没有经过验证的自动入库链路，不应理解为已经每天更新网站。
 
 **现在能做什么？** 浏览并搜索公开问题线索；点击卡片进入独立探索页；查看原始来源、证据局限和待研究问题；通过 Opportunity Map 探索明确标注的相关关系。网页支持中文、英文、法文切换。
@@ -64,6 +66,8 @@ Startup Product Radar is an open-source opportunity exploration workbench for in
 
 **[Launch interactive demo](https://supplicant-snowstain.github.io/startup-product-radar/)** · [Web source](web/) · [Research methodology](METHODOLOGY.md) · [Roadmap](docs/CURRENT_FOCUS.md)
 
+**Daily Research:** The site has a separate research section generated from dated reports and the existing product index at Pages build time. Research observations are not verified launches. Deployment remains unconfirmed until Actions succeeds.
+
 **Product Discovery:** A new-product panel and publishing feed have been added. The initial catalog now includes three sourced existing-product case studies (uv, Immich, Memos); these are not newly launched today. The website now separates dated launches from idea case studies; the scheduled daily report has not yet been confirmed to automatically populate the website.
 
 **What can you do?** Browse and search provisional signals, open evidence-backed exploration pages, inspect source links and limitations, and navigate explicitly labeled hypotheses in the Opportunity Map. The website offers Chinese, English, and French.
@@ -88,6 +92,8 @@ Open `http://localhost:8000`. A local HTTP server is required to fetch JSON data
 Startup Product Radar est un outil open source d'exploration d'opportunités destiné aux créateurs indépendants. Il rassemble des **signaux publics traçables** afin d'examiner les difficultés des utilisateurs, les solutions existantes et les questions encore ouvertes, sans prétendre prédire le succès d'une entreprise.
 
 **[Ouvrir la démo interactive](https://supplicant-snowstain.github.io/startup-product-radar/)** · [Code du site](web/) · [Méthodologie](METHODOLOGY.md) · [Feuille de route](docs/CURRENT_FOCUS.md)
+
+**Veille quotidienne :** Le site propose une section de rapports de recherche générée lors du déploiement. Les observations ne sont pas des lancements vérifiés. Le déploiement reste à confirmer dans Actions.
 
 **Découverte de produits :** Un espace dédié et un flux de données sont disponibles, mais trois fiches de produits existants (uv, Immich, Memos) sont maintenant publiées ; ce ne sont pas des lancements du jour. Le site distingue les lancements datés des études de cas. La mise à jour automatique depuis la veille quotidienne n'est pas encore validée.
 
