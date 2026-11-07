@@ -15,6 +15,8 @@ def payload():
         "intelligence": {
             **{key: {"zh": "有来源的内容", "en": "Source-based content", "fr": "Contenu sourcé"} for key in FIELDS},
             "source_status": "editorial_review_pending",
+            "source_links": ["https://example.org/primary"],
+            "evidence_level": "public_claims",
         },
     }
 class ReviewExportTests(unittest.TestCase):
@@ -40,6 +42,14 @@ class ReviewExportTests(unittest.TestCase):
         p=payload()
         p["intelligence"]["evidence"]["fr"]=""
         self.assertTrue(any("evidence.fr" in e for e in validate_export(p,self.root)))
+    def test_missing_source_links_rejected(self):
+        p=payload()
+        p["intelligence"]["source_links"]=[]
+        self.assertTrue(any("source" in e.lower() for e in validate_export(p,self.root)))
+    def test_invalid_evidence_level_rejected(self):
+        p=payload()
+        p["intelligence"]["evidence_level"]="verified_pmf"
+        self.assertTrue(any("evidence level" in e.lower() for e in validate_export(p,self.root)))
     def test_unindexed_product_rejected(self):
         p=payload()
         p["slug"]="unindexed"
