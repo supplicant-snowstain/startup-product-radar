@@ -47,16 +47,16 @@
       visible++;
       const card=document.createElement("article");card.className="research-card";
       const top=document.createElement("small");top.textContent=c.observed+" "+report.observed_at+" · "+c.label;
-      const h=document.createElement("h3");h.textContent=report.title;
-      card.append(top,h);
+      const h=document.createElement("h3");h.textContent=c.observed+" "+report.observed_at;const guide=document.createElement("p");guide.className="research-report-intro";guide.textContent=matches.length+" "+(l==="zh"?"个产品观察 · 先选产品了解它解决什么问题":l==="fr"?"produits observés · choisissez un produit pour comprendre le besoin":"products observed · choose a product to understand the problem");
+      card.append(top,h,guide);
       if(matches.length){
         const list=document.createElement("div");list.className="research-product-list";
         for(const p of matches){
           const item=document.createElement("div");item.className="research-product";
           const name=document.createElement("a");name.href="./research.html?id="+encodeURIComponent(p.slug);name.className="research-product-title";name.textContent=p.name;
           const category=document.createElement("small");category.textContent=p.category+" · "+(classification(p)==="nonai"?c.nonai:classification(p)==="ai"?c.ai:c.unknown);
-          const job=document.createElement("p");job.textContent=c.problem+": "+(p.intelligence?.job?.[l]||jobs[p.category]?.[l]||c.unknown);
-          item.append(name,category,job);
+          const job=document.createElement("p");job.className="research-job";job.textContent=c.problem+": "+(p.intelligence?.job?.[l]||jobs[p.category]?.[l]||c.unknown);
+          const action=document.createElement("span");action.className="research-item-action";action.textContent=l==="zh"?"看懂产品与研究证据 →":l==="fr"?"Comprendre le produit et les preuves →":"Understand product and evidence →";item.append(name,category,job,action);
           if(p.profile_url){const link=document.createElement("a");link.href=p.profile_url;link.target="_blank";link.rel="noopener noreferrer";link.textContent=c.profile+" ↗";item.append(link)}
           list.append(item);
         }
