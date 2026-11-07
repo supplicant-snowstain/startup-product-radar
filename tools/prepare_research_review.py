@@ -51,7 +51,17 @@ def validate_export(payload, root=ROOT):
                     errors.append(field+"."+lang+": must contain 1–1500 characters")
         if entry.get("source_status") != "editorial_review_pending":
             errors.append("Source status must remain editorial_review_pending")
-        if set(entry) != set(FIELDS)|{"source_status"}:
+        links = entry.get("source_links")
+        if not isinstance(links, list) or not links:
+            errors.append("At least one primary source URL is required")
+        else:
+            from urllib.parse import urlparse
+            for link in links:
+                if not isinstance(link, str) or len(link)>2048 or urlparse(link).scheme != "https" or not urlparse(link).hostname:
+                    errors.append("Source links must be valid HTTPS URLs")
+        if entry.get("evidence_level") not in ("public_claims", "observed_public_feedback", "independent_user_evidence"):
+            errors.append("Invalid evidence level")
+        if set(entry) != set(FIELDS)|{"source_status", "source_links", "evidence_level"}:
             errors.append("Unexpected intelligence fields")
     if set(payload) != {"slug", "source_report", "review_status", "intelligence"}:
         errors.append("Unexpected export fields")
