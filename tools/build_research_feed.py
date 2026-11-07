@@ -13,12 +13,14 @@ DATE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 
 
 def build(root=ROOT):
+    intelligence_path = root / "data/research_intelligence.json"
+    intelligence = json.loads(intelligence_path.read_text(encoding="utf-8"))["products"] if intelligence_path.is_file() else {}
     products = {}
     with (root / "index/products.csv").open(encoding="utf-8", newline="") as f:
         for row in csv.DictReader(f):
             day = row.get("first_observed", "")
             if DATE.fullmatch(day):
-                products.setdefault(day, []).append({"slug": row["slug"], "name": row["name"], "category": row.get("category", "Unknown"), "ai_role": row.get("ai_role", "unknown"), "website": row.get("website", ""), "profile_url": BASE + row["profile_path"]})
+                products.setdefault(day, []).append({"slug": row["slug"], "name": row["name"], "category": row.get("category", "Unknown"), "ai_role": row.get("ai_role", "unknown"), "website": row.get("website", ""), "profile_url": BASE + row["profile_path"], "intelligence": intelligence.get(row["slug"])})
     items = []
     for path in sorted((root / "reports").glob("????/??/????-??-??.md"), reverse=True):
         day = path.stem
