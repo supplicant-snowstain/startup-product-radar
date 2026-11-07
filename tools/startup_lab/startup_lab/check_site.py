@@ -15,7 +15,7 @@ class References(HTMLParser):
 
 def check():
     errors=[]
-    for page in ("index.html","explore.html","product.html","research.html"):
+    for page in ("index.html","explore.html","product.html","research.html","review.html"):
         parser=References()
         parser.feed((WEB/page).read_text(encoding="utf-8"))
         for asset in parser.scripts+parser.styles:
