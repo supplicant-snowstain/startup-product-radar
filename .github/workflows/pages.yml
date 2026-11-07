@@ -4,6 +4,9 @@ on:
     branches: [main]
     paths:
       - 'web/**'
+      - 'reports/**'
+      - 'index/products.csv'
+      - 'tools/build_research_feed.py'
       - 'data/provisional/**'
       - 'data/products/**'
       - 'data/product_candidates/**'
@@ -36,6 +39,8 @@ jobs:
         env:
           PYTHONPATH: tools/startup_lab
         run: python -m startup_lab.product_feed --root . --output web/products.json
+      - name: Generate research observations feed (not a launch feed)
+        run: python tools/build_research_feed.py --root . --output web/research.json
       - name: Validate daily candidate queue
         env:
           PYTHONPATH: tools/startup_lab
