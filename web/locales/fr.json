@@ -1,15 +1,15 @@
 {
   "ui": {
-    "navExplore": "Explorer les signaux",
+    "navExplore": "Explorer les produits",
     "navMethod": "Méthode",
     "heroKicker": "● UN GUIDE POUR LES CRÉATEURS CURIEUX",
     "hero": "Ne partez pas d'une <i>idée.</i><br>Partez d'un <mark>problème.</mark>",
     "heroDesc": "Repérez les difficultés, remontez aux sources et comprenez les besoins auxquels les solutions actuelles ne répondent pas encore.",
-    "heroAction": "Explorer les signaux ↗",
+    "heroAction": "Commencer par les produits ↗",
     "heroFine": "OBSERVATIONS ≠ DEMANDE VALIDÉE · OPEN SOURCE",
-    "boardKicker": "01 / TABLEAU DES SIGNAUX",
-    "boardTitle": "Là où se trouvent les difficultés.",
-    "boardDesc": "Des pistes de recherche sourcées, pas des opportunités déjà validées.",
+    "boardKicker": "02 / SIGNAUX DE BESOINS",
+    "boardTitle": "Quels problèmes rencontrent les utilisateurs ?",
+    "boardDesc": "Des indices publics, pas des opportunités validées.",
     "search": "Rechercher un problème, ex. CI",
     "all": "Tout",
     "dev": "Outils développeurs",
@@ -50,7 +50,21 @@
     "loadFailed": "Impossible de charger les données",
     "originalText": "Les résumés sont traduits ; la source originale conserve sa langue.",
     "devDomain": "Outils développeurs",
-    "aiDomain": "Outils IA"
+    "aiDomain": "Outils IA",
+    "journeyKicker": "COMMENCER ICI / GUIDE",
+    "journeyTitle": "Comprendre un produit avant de juger une idée.",
+    "journeyDesc": "Produits, besoins et rapports ont des rôles différents. Suivez un parcours simple pour les relier.",
+    "journeyProducts": "Découvrir un produit",
+    "journeyProductsDesc": "Que fait-il et pourquoi a-t-il été créé ?",
+    "journeySignals": "Comprendre le besoin",
+    "journeySignalsDesc": "Quelles difficultés restent sans solution ?",
+    "journeyResearch": "Examiner les preuves",
+    "journeyResearchDesc": "D'où viennent les affirmations et que manque-t-il ?",
+    "productsKicker": "01 / HISTOIRES DE PRODUITS",
+    "productsExplain": "Partez d'un produit concret : à qui sert-il, quel problème vise-t-il et quelle idée le motive ?",
+    "signalsExplain": "Ce ne sont pas des classements. Chaque carte présente un problème à vérifier, ses sources et les questions ouvertes.",
+    "researchKicker": "03 / RECHERCHE ET PREUVES",
+    "researchExplain": "Les rapports sont classés par date d'observation. Ouvrez un produit pour comprendre l'hypothèse, ou consultez le rapport source."
   },
   "signals": {
     "signal-ci-test-selection": {
