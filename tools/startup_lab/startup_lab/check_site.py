@@ -15,15 +15,18 @@ class References(HTMLParser):
 
 def check():
     errors=[]
-    for page in ("index.html","explore.html","product.html"):
+    for page in ("index.html","explore.html","product.html","research.html"):
         parser=References()
         parser.feed((WEB/page).read_text(encoding="utf-8"))
         for asset in parser.scripts+parser.styles:
             if asset.startswith(("http://","https://")):continue
             if not (WEB/asset).is_file():errors.append(page+": missing "+asset)
-    for file in ("signals.json","products.json","idea-stories.json","opportunity-map.json","site-status.json"):
+    for file in ("signals.json","products.json","idea-stories.json","opportunity-map.json","site-status.json","research.json"):
         try:json.loads((WEB/file).read_text(encoding="utf-8"))
         except (OSError,ValueError) as e:errors.append(file+": "+str(e))
+    research=json.loads((WEB/"research.json").read_text(encoding="utf-8"))
+    if research.get("kind")!="research_observations" or not isinstance(research.get("reports"),list):
+        errors.append("research.json: invalid research schema")
     products=json.loads((WEB/"products.json").read_text(encoding="utf-8"))
     if products.get("count")!=len(products.get("products",[])):errors.append("products.json: count mismatch")
     if (WEB/"site-status.json").is_file():
