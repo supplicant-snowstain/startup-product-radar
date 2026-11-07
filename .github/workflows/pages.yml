@@ -7,6 +7,7 @@ on:
       - 'reports/**'
       - 'index/products.csv'
       - 'tools/build_research_feed.py'
+      - 'tools/test_research_feed.py'
       - 'data/provisional/**'
       - 'data/products/**'
       - 'data/product_candidates/**'
@@ -41,6 +42,8 @@ jobs:
         run: python -m startup_lab.product_feed --root . --output web/products.json
       - name: Generate research observations feed (not a launch feed)
         run: python tools/build_research_feed.py --root . --output web/research.json
+      - name: Test research feed isolation
+        run: python tools/test_research_feed.py
       - name: Validate daily candidate queue
         env:
           PYTHONPATH: tools/startup_lab
