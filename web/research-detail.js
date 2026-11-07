@@ -27,8 +27,15 @@ $("research-error").hidden=true;$("research-detail").hidden=false;
 $("research-name").textContent=data.name;document.title=data.name+" — Startup Radar";
 $("research-category").textContent=data.category;$("research-date").textContent=data.observed_at+" · "+c.kicker;
 $("research-ai").textContent=["none","none_confirmed"].includes(data.ai_role)?c.nonai:data.ai_role==="unknown"?c.unknown:c.ai;
-const job=jobs[data.category]?.[l]||c.unknown;
-$("research-job").textContent=job;$("job-description").textContent=job+" — "+c.kicker;
+const intel=data.intelligence;
+const localized=(field,fallback)=>intel&&intel[field]&&intel[field][l]||fallback;
+const job=localized("job",jobs[data.category]?.[l]||c.unknown);
+$("research-job").textContent=job;$("job-description").textContent=job;
+$("workflow-note").textContent=localized("workflow",c.workflowNote);
+$("alternatives-note").textContent=localized("alternatives",c.alternativesNote);
+$("evidence-note").textContent=localized("evidence",c.evidenceNote);
+$("missing-note").textContent=localized("counterevidence",c.missingNote)+" "+c.missingNote;
+$("experiment-note").textContent=localized("experiment",c.experimentNote);
 link("research-website",data.website,c.website);link("research-profile",data.profile_url,c.profile);link("research-report",data.report_url,c.report);
 }
 window.addEventListener("radar-language-changed",render);
