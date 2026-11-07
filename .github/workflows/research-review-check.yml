@@ -1,0 +1,37 @@
+name: Validate research intelligence review
+
+on:
+  pull_request:
+    paths:
+      - 'data/research_intelligence.json'
+      - 'tools/prepare_research_review.py'
+      - 'tools/test_prepare_research_review.py'
+      - 'tools/build_research_feed.py'
+      - 'tools/test_research_feed.py'
+      - '.github/workflows/research-review-check.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'data/research_intelligence.json'
+      - 'tools/prepare_research_review.py'
+      - 'tools/test_prepare_research_review.py'
+      - '.github/workflows/research-review-check.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Test review export safety
+        run: python tools/test_prepare_research_review.py
+      - name: Test research feed isolation
+        run: python tools/test_research_feed.py
+      - name: Validate curated intelligence schema and source linkage
+        run: python tools/validate_research_intelligence.py --root .
