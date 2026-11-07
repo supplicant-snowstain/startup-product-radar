@@ -9,6 +9,7 @@ on:
       - 'data/research_intelligence.json'
       - 'tools/build_research_feed.py'
       - 'tools/test_research_feed.py'
+      - 'tools/validate_research_intelligence.py'
       - 'data/provisional/**'
       - 'data/products/**'
       - 'data/product_candidates/**'
@@ -45,6 +46,8 @@ jobs:
         run: python tools/build_research_feed.py --root . --output web/research.json
       - name: Test research feed isolation
         run: python tools/test_research_feed.py
+      - name: Validate curated research intelligence
+        run: python tools/validate_research_intelligence.py --root .
       - name: Validate daily candidate queue
         env:
           PYTHONPATH: tools/startup_lab
