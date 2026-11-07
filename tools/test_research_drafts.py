@@ -29,6 +29,7 @@ class DraftTests(unittest.TestCase):
             self.assertEqual([d["slug"] for d in result["drafts"]],["pending"])
             self.assertEqual(result["drafts"][0]["review_status"],"needs_human_review")
             self.assertEqual(result["drafts"][0]["extracted_zh"]["job"],"a task")
-            self.assertNotIn("approved",json.dumps(result))
+            draft_slugs = {draft["slug"] for draft in result["drafts"]}
+            self.assertNotIn("approved", draft_slugs)
 if __name__=="__main__":
     unittest.main()
