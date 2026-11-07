@@ -19,11 +19,13 @@ class ResearchFeedTest(unittest.TestCase):
                 w.writeheader()
                 w.writerow({"slug":"known","website":"https://example.org","name":"Known Research Product", "first_observed":"2026-11-07", "profile_path":"products/known.md", "category":"Developer Tools", "ai_role":"none"})
             (root / "data/product_candidates/candidate-abc.json").write_text('{"name":"Unreviewed"}', encoding="utf-8")
+            (root / "data/research_intelligence.json").write_text('{"products":{"known":{"job":{"en":"A grounded user task"}}}}', encoding="utf-8")
             feed = build(root)
             self.assertEqual(feed["kind"], "research_observations")
             self.assertEqual(feed["reports"][0]["observed_at"], "2026-11-07")
             self.assertEqual(feed["reports"][0]["products"][0]["ai_role"], "none")
             self.assertEqual(feed["reports"][0]["products"][0]["slug"], "known")
+            self.assertEqual(feed["reports"][0]["products"][0]["intelligence"]["job"]["en"], "A grounded user task")
             self.assertNotIn("Unreviewed", str(feed))
             self.assertNotIn("launch_date", str(feed))
 
