@@ -12,6 +12,7 @@
 | Date (Paris) | Featured research (observed products) | Full report |
 | --- | --- | --- |
 | 2026-11-08 | LiveReview · Quest · Turnstone | [Read](reports/2026/11/2026-11-08.md) |
+| 2026-11-08 | LiveReview · Quest · Turnstone | [Read](reports/2026/11/2026-11-08.md) |
 | 2026-11-07 | Glasshand · Maritime | [Read](reports/2026/11/2026-11-07.md) |
 | 2026-11-06 | Pushary for Teams · Okapi · Tao Browser · Pinku · … | [Read](reports/2026/11/2026-11-06.md) |
 | 2026-11-05 | Chromagraph Camera · Tiny Computers · HackerTV · Synkr | [Read](reports/2026/11/2026-11-05.md) |
