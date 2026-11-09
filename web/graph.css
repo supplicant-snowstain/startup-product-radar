@@ -22,3 +22,7 @@
 .graph-claim-status{font-size:12px!important;font-weight:700;color:#315d40!important;background:#edf4e8;padding:9px 12px;border-radius:7px;border:1px solid #cbdcca}
 
 .graph-source-count{font-size:12px!important;font-weight:600;color:#47674f!important;margin:10px 0 4px!important}
+
+#graph-relation-type{display:block;width:min(100%,560px);margin:12px 0;padding:12px 14px;border:1px solid #9fba9e;border-radius:9px;background:#fff;color:#254331;font:inherit;box-sizing:border-box}
+#graph-relation-type[hidden]{display:none}
+#graph-relation-type:focus-visible{outline:3px solid #72a27a;outline-offset:2px}
