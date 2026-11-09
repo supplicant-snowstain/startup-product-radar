@@ -18,3 +18,7 @@ maritime,Maritime,https://maritime.sh/,unknown,Agent Compute Infrastructure,2026
 livereview,LiveReview,https://hexmos.com/livereview/,unknown,Code Review,2026-11-08,2026-11-08,risk_scoring_ai,unknown,product_hunt_launch_and_maker_comments,provisional,products/livereview.md
 quest,Quest,https://start.new.quest/,unknown,Personal AI,2026-11-08,2026-11-08,personal_ai_advisor,unknown,product_hunt_launch_and_maker_comments,provisional,products/quest.md
 turnstone,Turnstone,https://myturnstone.ai/,unknown,Agent Orchestration,2026-11-08,2026-11-08,multi_model_agent_router,unknown,product_hunt_launch_and_maker_comments,provisional,products/turnstone.md
+axl,AXL,https://axl.tech/,unknown,AI GTM,2026-11-09,2026-11-09,agent_sales_mcp,unknown,product_hunt_launch_and_maker_comments,provisional,products/axl.md
+nomac,NoMac,https://nomac.app/,unknown,Agent Compute,2026-11-09,2026-11-09,agent_cloud_mac,unknown,product_hunt_launch_and_vendor_claims,provisional,products/nomac.md
+docsalot,DocsAlot,https://docsalot.dev/,unknown,Knowledge Operations,2026-11-09,2026-11-09,ai_support_retrieval,unknown,product_hunt_feature_launch,provisional,products/docsalot.md
+zigzag-browser,Zigzag Browser,https://zigzagbrowser.com/,unknown,Browser,2026-11-09,2026-11-09,none,unknown,product_hunt_launch_and_maker_comments,provisional,products/zigzag-browser.md
