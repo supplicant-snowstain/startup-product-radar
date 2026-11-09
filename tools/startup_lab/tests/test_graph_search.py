@@ -13,6 +13,13 @@ class GraphSearchTests(unittest.TestCase):
         self.assertIn('const eligible=visibleProducts()', js)
         self.assertIn('searchInput.addEventListener("input"', js)
 
+    def test_claim_provenance_labels(self):
+        js = (ROOT / "web" / "graph.js").read_text(encoding="utf-8")
+        self.assertIn('claimStatus:record?.claim_status==="documented"', js)
+        self.assertIn("Documented · not independently verified", js)
+        self.assertIn("Research hypothesis · unvalidated", js)
+        self.assertIn("No reviewed research conclusion", js)
+
     def test_empty_state_and_accessibility(self):
         js = (ROOT / "web" / "graph.js").read_text(encoding="utf-8")
         self.assertIn('No matching products.', js)
