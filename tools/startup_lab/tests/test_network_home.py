@@ -14,6 +14,13 @@ class NetworkHomeTests(unittest.TestCase):
         self.assertIn('src="network-home.js"', page)
         self.assertIn('href="network-home.css"', page)
 
+    def test_graph_is_primary_and_legacy_hero_removed(self):
+        page = (WEB / "index.html").read_text(encoding="utf-8")
+        self.assertLess(page.index('id="network"'), page.index('id="products"'))
+        self.assertNotIn('class="hero"', page)
+        self.assertIn("INTERFACE v3", page)
+        self.assertIn('id="network-frame-status"', page)
+
     def test_embedded_explorer_uses_same_origin_messages(self):
         source = (WEB / "graph.js").read_text(encoding="utf-8")
         self.assertIn('event.origin!==location.origin', source)
