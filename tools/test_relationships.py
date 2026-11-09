@@ -27,6 +27,18 @@ class RelationshipGateTests(unittest.TestCase):
     def test_missing_evidence_rejected(self):
         record = dict(self.good, source_url="")
         self.assertTrue(module.validate({"schema_version":1,"relationships":[record]}, {"a","b"}))
+    def test_invalid_calendar_date_rejected(self):
+        record = dict(self.good, reviewed_at="2026-02-30")
+        self.assertTrue(module.validate({"schema_version":1,"relationships":[record]}, {"a","b"}))
+    def test_future_review_date_rejected(self):
+        record = dict(self.good, reviewed_at="2999-01-01")
+        self.assertTrue(module.validate({"schema_version":1,"relationships":[record]}, {"a","b"}))
+    def test_duplicate_approved_edge_rejected(self):
+        record = dict(self.good, id="another-id")
+        self.assertTrue(module.validate({"schema_version":1,"relationships":[self.good,record]}, {"a","b"}))
+    def test_different_relation_type_is_valid(self):
+        record = dict(self.good, id="another-id", type="same_audience")
+        self.assertEqual(module.validate({"schema_version":1,"relationships":[self.good,record]}, {"a","b"}), [])
     def test_pending_not_published(self):
         with tempfile.TemporaryDirectory() as folder:
             root=pathlib.Path(folder)
