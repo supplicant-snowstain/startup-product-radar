@@ -20,6 +20,14 @@ class GraphSearchTests(unittest.TestCase):
         self.assertIn("Research hypothesis · unvalidated", js)
         self.assertIn("No reviewed research conclusion", js)
 
+    def test_source_traceability_and_deep_links(self):
+        js = (ROOT / "web" / "graph.js").read_text(encoding="utf-8")
+        self.assertIn("sourceCount:Array.isArray(record?.sources)", js)
+        self.assertIn("Public sources: ", js)
+        self.assertIn('url.searchParams.set("id",selected)', js)
+        self.assertIn('url.searchParams.delete("embed")', js)
+        self.assertIn("Share this product research view", js)
+
     def test_empty_state_and_accessibility(self):
         js = (ROOT / "web" / "graph.js").read_text(encoding="utf-8")
         self.assertIn('No matching products.', js)
