@@ -4,6 +4,7 @@ import argparse
 import json
 import pathlib
 import sys
+from datetime import date
 from urllib.parse import urlparse
 
 TYPES = {"alternative_to", "same_audience", "same_problem", "shared_maker", "integrates_with"}
@@ -15,6 +16,7 @@ def validate(data, known):
     if data.get("schema_version") != 1 or not isinstance(data.get("relationships"), list):
         return ["expected schema_version=1 and relationships array"]
     ids = set()
+    pairs = set()
     for i, r in enumerate(data["relationships"]):
         prefix = f"relationships[{i}]"
         if not isinstance(r, dict):
@@ -33,6 +35,10 @@ def validate(data, known):
         if r.get("from") == r.get("to") or r.get("from") not in known or r.get("to") not in known:
             errors.append(f"{prefix}: endpoints must be distinct known product slugs")
         if status == "approved":
+            pair = (r.get("from"), r.get("to"), r.get("type"))
+            if pair in pairs:
+                errors.append(f"{prefix}: duplicate approved directed relation")
+            pairs.add(pair)
             url = r.get("source_url")
             if not isinstance(url, str) or urlparse(url).scheme != "https" or not urlparse(url).netloc:
                 errors.append(f"{prefix}: approved relationship requires https source_url")
@@ -41,8 +47,14 @@ def validate(data, known):
             assertion = r.get("assertion")
             if not isinstance(assertion, dict) or not isinstance(assertion.get("en"), str) or not assertion["en"].strip():
                 errors.append(f"{prefix}: approved relationship requires an English assertion")
-            if not isinstance(r.get("reviewed_at"), str) or len(r["reviewed_at"]) != 10:
-                errors.append(f"{prefix}: approved relationship requires YYYY-MM-DD reviewed_at")
+            reviewed_at = r.get("reviewed_at")
+            try:
+                if not isinstance(reviewed_at, str) or date.fromisoformat(reviewed_at).isoformat() != reviewed_at:
+                    raise ValueError("non-canonical date")
+                if date.fromisoformat(reviewed_at) > date.today():
+                    errors.append(f"{prefix}: review date cannot be in the future")
+            except ValueError:
+                errors.append(f"{prefix}: approved relationship requires valid YYYY-MM-DD reviewed_at")
     return errors
 
 def main():
