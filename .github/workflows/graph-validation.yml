@@ -1,0 +1,27 @@
+name: Validate relationship explorer PR
+on:
+  pull_request:
+    paths:
+      - 'web/**'
+      - 'tools/startup_lab/**'
+      - '.github/workflows/graph-validation.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Generate research feed
+        run: python tools/build_research_feed.py --root . --output web/research.json
+      - name: Run graph and site regression tests
+        env:
+          PYTHONPATH: tools/startup_lab
+        run: python -m unittest discover -s tools/startup_lab/tests -v
+      - name: Check JavaScript syntax
+        run: |
+          for file in web/*.js; do node --check "$file"; done
