@@ -14,3 +14,7 @@
 .graph-embedded .graph-inspector h2{font-size:22px}
 .graph-embedded .graph-stage svg{min-height:300px}
 @media(max-width:850px){.graph-embedded .graph-layout{grid-template-columns:1fr}.graph-embedded .graph-stage svg{min-height:260px}}
+
+/* Phase 2: product discovery across both network modes */
+#graph-search{display:block;width:min(100%,560px);margin:14px 0 12px;padding:13px 15px;border:1px solid #9fba9e;border-radius:9px;background:#fff;color:#254331;font:inherit;box-sizing:border-box}
+#graph-search:focus-visible{outline:3px solid #72a27a;outline-offset:2px}
