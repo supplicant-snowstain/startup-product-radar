@@ -59,6 +59,8 @@ jobs:
         run: python tools/build_opportunity_feed.py --registry data/opportunity.json --research web/research.json --output web/opportunity.json
       - name: Publish verified official social profiles
         run: python tools/build_social_feed.py --registry data/social_profiles.json --products index/products.csv --output web/social-profiles.json
+      - name: Test opportunity publication contract
+        run: python -m unittest discover -s tools -p 'test_opportunity_contract.py' -v
       - name: Test relationship evidence gate
         run: python tools/test_relationships.py
       - name: Test social-source candidate extraction
