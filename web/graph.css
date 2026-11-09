@@ -18,3 +18,5 @@
 /* Phase 2: product discovery across both network modes */
 #graph-search{display:block;width:min(100%,560px);margin:14px 0 12px;padding:13px 15px;border:1px solid #9fba9e;border-radius:9px;background:#fff;color:#254331;font:inherit;box-sizing:border-box}
 #graph-search:focus-visible{outline:3px solid #72a27a;outline-offset:2px}
+
+.graph-claim-status{font-size:12px!important;font-weight:700;color:#315d40!important;background:#edf4e8;padding:9px 12px;border-radius:7px;border:1px solid #cbdcca}
