@@ -7,5 +7,5 @@ zh:{title:"从关系网络看懂一个创业产品。",desc:"选择产品，探�
 fr:{title:"Explorer les relations derrière chaque produit.",desc:"Choisissez un produit et explorez besoins, alternatives et sources. Les liens en pointillés indiquent des hypothèses ou des preuves manquantes. Observation ≠ lancement.",link:"Ouvrir le réseau interactif ↗",frame:"Réseau interactif de recherche sur les startups"}
 };
 function render(){const lang=["zh","en","fr"].includes(window.RadarI18n?.lang)?window.RadarI18n.lang:"en",c=copy[lang];title.textContent=c.title;desc.textContent=c.desc;link.textContent=c.link;frame.title=c.frame;try{frame.contentWindow?.postMessage({type:"radar-set-language",lang},location.origin)}catch(_){}}
-frame.addEventListener("load",render);window.addEventListener("radar-language-changed",render);render();
+frame.addEventListener("load",()=>{render();const status=document.getElementById("network-frame-status");if(status)status.hidden=true});frame.addEventListener("error",()=>{const status=document.getElementById("network-frame-status");if(status){status.hidden=false;status.textContent="The embedded network could not load. Open the full-screen relationship explorer using the link above."}});window.addEventListener("radar-language-changed",render);render();
 })();
