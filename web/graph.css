@@ -4,3 +4,13 @@
 .graph-mode{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}.graph-mode button{border:1px solid #aabfa9;background:#fff;color:#254331;padding:11px 18px;border-radius:9px;cursor:pointer;font-weight:600}.graph-mode button[aria-pressed=true]{background:#244d36;color:#fff}.graph-mode button:focus-visible{outline:3px solid #72a27a;outline-offset:2px}.graph-stage svg g[role=button]{cursor:pointer}.graph-stage svg g[role=button]:hover{filter:drop-shadow(0 0 5px #5e986d)}
 
 #graph-evidence strong{display:block;font-size:12px;letter-spacing:.035em;color:#315d40;margin-top:16px}#graph-evidence p{font-size:13px;line-height:1.65;color:#526b58;margin:7px 0 0}.graph-inspector #graph-node-description{white-space:pre-line}.graph-inspector #graph-links{margin-top:22px;border-top:1px solid #e3e9df;padding-top:18px}.graph-inspector #graph-links:empty{display:none}
+
+/* Compact, accessible rendering when the explorer is embedded in the landing page. */
+.graph-embedded header,.graph-embedded footer,.graph-embedded .graph-hero>small,.graph-embedded .graph-hero>h1,.graph-embedded .graph-hero>p:not(#graph-status),.graph-embedded .graph-disclaimer{display:none}
+.graph-embedded main{max-width:none;padding:0 14px}
+.graph-embedded .graph-hero{padding:10px 0 0}
+.graph-embedded .graph-layout{margin:12px 0;gap:12px}
+.graph-embedded .graph-inspector{padding:16px}
+.graph-embedded .graph-inspector h2{font-size:22px}
+.graph-embedded .graph-stage svg{min-height:300px}
+@media(max-width:850px){.graph-embedded .graph-layout{grid-template-columns:1fr}.graph-embedded .graph-stage svg{min-height:260px}}
