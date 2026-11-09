@@ -1,4 +1,13 @@
 (function(){"use strict";
+if(new URLSearchParams(location.search).get("embed")==="1")document.documentElement.classList.add("graph-embedded");
+window.addEventListener("message",event=>{
+  if(event.origin!==location.origin||event.source!==window.parent||event.data?.type!=="radar-set-language")return;
+  const next=event.data.lang;
+  if(!["en","zh","fr"].includes(next))return;
+  const selector=document.getElementById("language");
+  if(selector&&selector.value!==next){selector.value=next;selector.dispatchEvent(new Event("change",{bubbles:true}))}
+});
+
 const $=id=>document.getElementById(id),lang=()=>["zh","en","fr"].includes(window.RadarI18n?.lang)?window.RadarI18n.lang:"en";
 const T={zh:{kicker:"产品关系探索 · 研究视图",title:"一个产品背后有哪些关系？",desc:"从产品出发，探索用户问题、目标对象、解决方式、替代方案与原始来源。没有证据的关系不会被编造。",choose:"选择产品",reset:"重置视图",hint:"点击节点查看详情；拖动节点调整位置",missing:"暂无经过核查的具体资料",product:"产品",problem:"用户问题",audience:"目标用户",solution:"解决方式",alternative:"现有替代方案",source:"信息来源",maker:"提出者 / 团队",observed:"观察日期",uncertain:"研究假设，尚未验证需求",makerMissing:"当前资料没有可核实的提出者信息",audienceMissing:"目前没有可核实的明确目标用户画像",sourceLink:"查看原始研究来源",website:"产品官网",profile:"产品研究档案",report:"当日研究报告",disclaimer:"实线表示资料中有对应描述；虚线表示研究推断或信息缺失。观察日期不是发布日期，公开产品资料不等于独立验证。",error:"无法加载研究数据。",empty:"没有可展示的产品。"},
 en:{kicker:"PRODUCT RELATIONSHIPS · RESEARCH VIEW",title:"What is connected to this product?",desc:"Explore the problem, intended audience, approach, alternatives and public sources. Unknown relationships are not invented.",choose:"Choose a product",reset:"Reset view",hint:"Click to inspect; drag nodes to rearrange",missing:"No reviewed details available",product:"Product",problem:"User problem",audience:"Intended audience",solution:"Product approach",alternative:"Existing alternatives",source:"Discovery source",maker:"Maker / team",observed:"Observation date",uncertain:"Research hypothesis, not validated demand",makerMissing:"No attributable maker identity in this research record",audienceMissing:"No independently supported audience profile yet",sourceLink:"Open original research",website:"Product website",profile:"Research profile",report:"Daily report",disclaimer:"Solid links indicate described relationships; dashed links indicate uncertain or missing information. Observation is not launch date. Public product material is not independent validation.",error:"Research feed could not be loaded.",empty:"No products available."},
