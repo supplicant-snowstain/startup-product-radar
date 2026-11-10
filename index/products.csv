@@ -22,3 +22,8 @@ axl,AXL,https://axl.tech/,unknown,AI GTM,2026-11-09,2026-11-09,agent_sales_mcp,u
 nomac,NoMac,https://nomac.app/,unknown,Agent Compute,2026-11-09,2026-11-09,agent_cloud_mac,unknown,product_hunt_launch_and_vendor_claims,provisional,products/nomac.md
 docsalot,DocsAlot,https://docsalot.dev/,unknown,Knowledge Operations,2026-11-09,2026-11-09,ai_support_retrieval,unknown,product_hunt_feature_launch,provisional,products/docsalot.md
 zigzag-browser,Zigzag Browser,https://zigzagbrowser.com/,unknown,Browser,2026-11-09,2026-11-09,none,unknown,product_hunt_launch_and_maker_comments,provisional,products/zigzag-browser.md
+product-hunt-mcp,Product Hunt MCP,https://www.producthunt.com/products/producthunt,unknown,Product discovery,2026-11-10,2026-11-10,agent_tool_interface,unknown,product_hunt_public_listing,provisional,products/product-hunt-mcp.md
+dageno-ai-2,Dageno AI 2.0,https://www.producthunt.com/products/agent-powered-geo-by-dageno,unknown,GEO Analytics,2026-11-10,2026-11-10,ai_visibility_analysis,unknown,product_hunt_public_listing,provisional,products/dageno-ai-2.md
+databox-cli,Databox CLI,https://www.producthunt.com/products/databox,unknown,Business Analytics,2026-11-10,2026-11-10,agent_cli,unknown,product_hunt_public_listing,provisional,products/databox-cli.md
+arcjet-security-models,Arcjet AI security models,https://www.producthunt.com/products/arcjet,unknown,Agent Security,2026-11-10,2026-11-10,specialized_security_models,unknown,product_hunt_public_listing,provisional,products/arcjet-security-models.md
+protomap,ProtoMap,https://www.producthunt.com/,unknown,Developer Tools,2026-11-10,2026-11-10,agent_code_context,unknown,product_hunt_public_listing,provisional,products/protomap.md
