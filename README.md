@@ -12,6 +12,7 @@
 | Date (Paris) | Featured research (observed products) | Full report |
 | --- | --- | --- |
 | 2026-11-10 | Product Hunt MCP · Dageno AI 2.0 · Databox CLI · Arcjet AI security models · … | [Read](reports/2026/11/2026-11-10.md) |
+| 2026-11-10 | Product Hunt MCP · Dageno AI 2.0 · Databox CLI · Arcjet security models · ProtoMap | [Read](reports/2026/11/2026-11-10.md) |
 | 2026-11-09 | AXL · NoMac · DocsAlot · Zigzag Browser | [Read](reports/2026/11/2026-11-09.md) |
 | 2026-11-08 | LiveReview · Quest · Turnstone | [Read](reports/2026/11/2026-11-08.md) |
 | 2026-11-07 | Glasshand · Maritime | [Read](reports/2026/11/2026-11-07.md) |
