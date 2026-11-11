@@ -5,20 +5,19 @@
 <!-- DAILY_RADAR_START -->
 ## 🛰️ Latest research / 最新研究 / Dernières recherches
 
-**Latest: 2026-11-10 (Europe/Paris)** · [中文深度报告](reports/2026/11/2026-11-10.md) · [All reports / 全部日报](reports/README.md)
+**Latest: 2026-11-11 (Europe/Paris)** · [中文深度报告](reports/2026/11/2026-11-11.md) · [All reports / 全部日报](reports/README.md)
 
 > **研究提醒：** 本栏目按报告观察日期排列，**不代表产品首次发布日期**。产品榜单、创始人主张和融资不等于留存或 PMF；请阅读报告中的原始证据与反面证据。
 
 | Date (Paris) | Featured research (observed products) | Full report |
 | --- | --- | --- |
+| 2026-11-11 | Research report (see evidence and limitations) | [Read](reports/2026/11/2026-11-11.md) |
 | 2026-11-10 | Product Hunt MCP · Dageno AI 2.0 · Databox CLI · Arcjet AI security models · … | [Read](reports/2026/11/2026-11-10.md) |
-| 2026-11-10 | Product Hunt MCP · Dageno AI 2.0 · Databox CLI · Arcjet security models · ProtoMap | [Read](reports/2026/11/2026-11-10.md) |
 | 2026-11-09 | AXL · NoMac · DocsAlot · Zigzag Browser | [Read](reports/2026/11/2026-11-09.md) |
 | 2026-11-08 | LiveReview · Quest · Turnstone | [Read](reports/2026/11/2026-11-08.md) |
 | 2026-11-07 | Glasshand · Maritime | [Read](reports/2026/11/2026-11-07.md) |
 | 2026-11-06 | Pushary for Teams · Okapi · Tao Browser · Pinku · … | [Read](reports/2026/11/2026-11-06.md) |
 | 2026-11-05 | Chromagraph Camera · Tiny Computers · HackerTV · Synkr | [Read](reports/2026/11/2026-11-05.md) |
-| 2026-11-04 | AgentKit by Scalekit · Testifly | [Read](reports/2026/11/2026-11-04.md) |
 
 **Browse:** [Product profiles / 产品档案](products/) · [Insights / 需求洞察](insights/) · [Structured index / 产品索引](index/products.csv) · [Methodology / 研究方法](METHODOLOGY.md)
 
