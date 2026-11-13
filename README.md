@@ -11,6 +11,7 @@
 
 | Date (Paris) | Featured research (observed products) | Full report |
 | --- | --- | --- |
+| 2026-11-13 | Omnigraph · three.dev · Spacefast · YouArt Desktop · Nameshot | [Read](reports/2026/11/2026-11-13.md) |
 | 2026-11-13 | Research report (see evidence and limitations) | [Read](reports/2026/11/2026-11-13.md) |
 | 2026-11-12 | ScroogeFrog AI · Nod by n8n · CALL-E · Skillbox · … | [Read](reports/2026/11/2026-11-12.md) |
 | 2026-11-11 | Latch.ai · Seldon / Wren · Opal Reader · Co-Review · … | [Read](reports/2026/11/2026-11-11.md) |
