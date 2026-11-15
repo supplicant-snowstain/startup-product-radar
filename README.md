@@ -5,12 +5,13 @@
 <!-- DAILY_RADAR_START -->
 ## 🛰️ Latest research / 最新研究 / Dernières recherches
 
-**Latest: 2026-11-14 (Europe/Paris)** · [中文深度报告](reports/2026/11/2026-11-14.md) · [All reports / 全部日报](reports/README.md)
+**Latest: 2026-11-15 (Europe/Paris)** · [中文深度报告](reports/2026/11/2026-11-15.md) · [All reports / 全部日报](reports/README.md)
 
 > **研究提醒：** 本栏目按报告观察日期排列，**不代表产品首次发布日期**。产品榜单、创始人主张和融资不等于留存或 PMF；请阅读报告中的原始证据与反面证据。
 
 | Date (Paris) | Featured research (observed products) | Full report |
 | --- | --- | --- |
+| 2026-11-15 | Antelog · Dex Semantics · Aboard Sign · Replay · CaptureFlow | [Read](reports/2026/11/2026-11-15.md) |
 | 2026-11-14 | Research report (see evidence and limitations) | [Read](reports/2026/11/2026-11-14.md) |
 | 2026-11-14 | Templify AI · Filament by Galaxy · Replicate · Trainn MCP · de:volt | [Read](reports/2026/11/2026-11-14.md) |
 | 2026-11-13 | Omnigraph · three.dev · Spacefast · YouArt Desktop App · … | [Read](reports/2026/11/2026-11-13.md) |
