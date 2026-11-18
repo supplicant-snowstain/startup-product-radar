@@ -11,7 +11,7 @@
 
 | Date (Paris) | Featured research (observed products) | Full report |
 | --- | --- | --- |
-| 2026-11-18 | Research report (see evidence and limitations) | [Read](reports/2026/11/2026-11-18.md) |
+| 2026-11-18 | Versine · superlog · Appxiom · TheBold · … | [Read](reports/2026/11/2026-11-18.md) |
 | 2026-11-17 | Trusty CSV · Cookie Away · StateWeave · vatnode · … | [Read](reports/2026/11/2026-11-17.md) |
 | 2026-11-16 | Rakazo · Frevana Multiplayer · Talyn Cloud Sandboxes · TwoBucket · … | [Read](reports/2026/11/2026-11-16.md) |
 | 2026-11-15 | Antelog · Dex Semantics · Aboard Sign · Replay · … | [Read](reports/2026/11/2026-11-15.md) |
