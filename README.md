@@ -5,23 +5,19 @@
 <!-- DAILY_RADAR_START -->
 ## 🛰️ Latest research / 最新研究 / Dernières recherches
 
-**Latest: 2026-11-17 (Europe/Paris)** · [中文深度报告](reports/2026/11/2026-11-17.md) · [All reports / 全部日报](reports/README.md)
+**Latest: 2026-11-18 (Europe/Paris)** · [中文深度报告](reports/2026/11/2026-11-18.md) · [All reports / 全部日报](reports/README.md)
 
 > **研究提醒：** 本栏目按报告观察日期排列，**不代表产品首次发布日期**。产品榜单、创始人主张和融资不等于留存或 PMF；请阅读报告中的原始证据与反面证据。
 
 | Date (Paris) | Featured research (observed products) | Full report |
 | --- | --- | --- |
-| 2026-11-17 | Trusty CSV · Cookie Away · StateWeave · vatnode · HTPBE? | [Read](reports/2026/11/2026-11-17.md) |
-| 2026-11-16 | Rakazo · Frevana Multiplayer · Talyn · TwoBucket · Remindly · Tulvo · collecto.rs | [Read](reports/2026/11/2026-11-16.md) |
-| 2026-11-15 | Antelog · Dex Semantics · Aboard Sign · Replay · CaptureFlow | [Read](reports/2026/11/2026-11-15.md) |
-| 2026-11-14 | Research report (see evidence and limitations) | [Read](reports/2026/11/2026-11-14.md) |
-| 2026-11-14 | Templify AI · Filament by Galaxy · Replicate · Trainn MCP · de:volt | [Read](reports/2026/11/2026-11-14.md) |
+| 2026-11-18 | Research report (see evidence and limitations) | [Read](reports/2026/11/2026-11-18.md) |
+| 2026-11-17 | Trusty CSV · Cookie Away · StateWeave · vatnode · … | [Read](reports/2026/11/2026-11-17.md) |
+| 2026-11-16 | Rakazo · Frevana Multiplayer · Talyn Cloud Sandboxes · TwoBucket · … | [Read](reports/2026/11/2026-11-16.md) |
+| 2026-11-15 | Antelog · Dex Semantics · Aboard Sign · Replay · … | [Read](reports/2026/11/2026-11-15.md) |
+| 2026-11-14 | Templify AI · Filament by Galaxy · Replicate by Letter · Trainn MCP · … | [Read](reports/2026/11/2026-11-14.md) |
 | 2026-11-13 | Omnigraph · three.dev · Spacefast · YouArt Desktop App · … | [Read](reports/2026/11/2026-11-13.md) |
 | 2026-11-12 | ScroogeFrog AI · Nod by n8n · CALL-E · Skillbox · … | [Read](reports/2026/11/2026-11-12.md) |
-| 2026-11-11 | Latch.ai · Seldon / Wren · Opal Reader · Co-Review · … | [Read](reports/2026/11/2026-11-11.md) |
-| 2026-11-10 | Product Hunt MCP · Dageno AI 2.0 · Databox CLI · Arcjet AI security models · … | [Read](reports/2026/11/2026-11-10.md) |
-| 2026-11-09 | AXL · NoMac · DocsAlot · Zigzag Browser | [Read](reports/2026/11/2026-11-09.md) |
-| 2026-11-08 | LiveReview · Quest · Turnstone | [Read](reports/2026/11/2026-11-08.md) |
 
 **Browse:** [Product profiles / 产品档案](products/) · [Insights / 需求洞察](insights/) · [Structured index / 产品索引](index/products.csv) · [Methodology / 研究方法](METHODOLOGY.md)
 
