@@ -5,12 +5,13 @@
 <!-- DAILY_RADAR_START -->
 ## 🛰️ Latest research / 最新研究 / Dernières recherches
 
-**Latest: 2026-11-19 (Europe/Paris)** · [中文深度报告](reports/2026/11/2026-11-19.md) · [All reports / 全部日报](reports/README.md)
+**Latest: 2026-11-20 (Europe/Paris)** · [中文深度报告](reports/2026/11/2026-11-20.md) · [All reports / 全部日报](reports/README.md)
 
 > **研究提醒：** 本栏目按报告观察日期排列，**不代表产品首次发布日期**。产品榜单、创始人主张和融资不等于留存或 PMF；请阅读报告中的原始证据与反面证据。
 
 | Date (Paris) | Featured research (observed products) | Full report |
 | --- | --- | --- |
+| 2026-11-20 | TestSprite 4.0 · Verse Engine · Stripo Email Widgets · Manufact · mio click | [Read](reports/2026/11/2026-11-20.md) |
 | 2026-11-19 | Happo animation testing · Afterall Photo · Yetly · UI Verify · … | [Read](reports/2026/11/2026-11-19.md) |
 | 2026-11-18 | Versine · superlog · Appxiom · TheBold · … | [Read](reports/2026/11/2026-11-18.md) |
 | 2026-11-17 | Trusty CSV · Cookie Away · StateWeave · vatnode · … | [Read](reports/2026/11/2026-11-17.md) |
