@@ -12,6 +12,7 @@
 | Date (Paris) | Featured research (observed products) | Full report |
 | --- | --- | --- |
 | 2026-11-21 | Research report (see evidence and limitations) | [Read](reports/2026/11/2026-11-21.md) |
+| 2026-11-21 | NetSieve · pickfit · Groundwork · Andromon · ThreadLore | [Read](reports/2026/11/2026-11-21.md) |
 | 2026-11-20 | TestSprite 4.0 · Verse Engine by Ctruh · Stripo Email Widgets · Manufact · … | [Read](reports/2026/11/2026-11-20.md) |
 | 2026-11-19 | Happo animation testing · Afterall Photo · Yetly · UI Verify · … | [Read](reports/2026/11/2026-11-19.md) |
 | 2026-11-18 | Versine · superlog · Appxiom · TheBold · … | [Read](reports/2026/11/2026-11-18.md) |
