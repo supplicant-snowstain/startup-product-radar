@@ -5,12 +5,13 @@
 <!-- DAILY_RADAR_START -->
 ## 🛰️ Latest research / 最新研究 / Dernières recherches
 
-**Latest: 2026-11-21 (Europe/Paris)** · [中文深度报告](reports/2026/11/2026-11-21.md) · [All reports / 全部日报](reports/README.md)
+**Latest: 2026-11-22 (Europe/Paris)** · [中文深度报告](reports/2026/11/2026-11-22.md) · [All reports / 全部日报](reports/README.md)
 
 > **研究提醒：** 本栏目按报告观察日期排列，**不代表产品首次发布日期**。产品榜单、创始人主张和融资不等于留存或 PMF；请阅读报告中的原始证据与反面证据。
 
 | Date (Paris) | Featured research (observed products) | Full report |
 | --- | --- | --- |
+| 2026-11-22 | AI Context Flow MCP · Codemany · Glassmail · Backspin · Smorza | [Read](reports/2026/11/2026-11-22.md) |
 | 2026-11-21 | Research report (see evidence and limitations) | [Read](reports/2026/11/2026-11-21.md) |
 | 2026-11-21 | NetSieve · pickfit · Groundwork · Andromon · ThreadLore | [Read](reports/2026/11/2026-11-21.md) |
 | 2026-11-20 | TestSprite 4.0 · Verse Engine by Ctruh · Stripo Email Widgets · Manufact · … | [Read](reports/2026/11/2026-11-20.md) |
