@@ -28,6 +28,15 @@ class GraphSearchTests(unittest.TestCase):
         self.assertIn('url.searchParams.delete("embed")', js)
         self.assertIn("Share this product research view", js)
 
+    def test_relationship_type_filter(self):
+        js = (ROOT / "web" / "graph.js").read_text(encoding="utf-8")
+        self.assertIn('relationTypeFilter==="all"||r.type===relationTypeFilter', js)
+        self.assertIn('relationSelect.id="graph-relation-type"', js)
+        self.assertIn('relationSelect.addEventListener("change"', js)
+        self.assertIn('relationTypeFilter=relationSelect.value', js)
+        self.assertIn('$("graph-relation-type").hidden=mode!=="global"', js)
+        self.assertIn('window.addEventListener("radar-language-changed",updateRelationLabels)', js)
+
     def test_empty_state_and_accessibility(self):
         js = (ROOT / "web" / "graph.js").read_text(encoding="utf-8")
         self.assertIn('No matching products.', js)
